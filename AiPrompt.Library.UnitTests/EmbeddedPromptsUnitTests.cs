@@ -1,4 +1,5 @@
-﻿using AiPrompts;
+﻿using AiPrompt.Library.ProjectPrompts;
+using AiPrompts;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
@@ -40,16 +41,13 @@ namespace AiPrompt.Library
         [TestMethod]
         public void GetAllDirectivesPromptContentUnitTest()
         {
-            IEnumerable<string> embeddedPrompts
-                = EmbeddedPrompts.GetAllPaths("Directives.txt");
 
-            foreach (string embeddedPrompt in embeddedPrompts)
-            {
-                Debug.WriteLine(embeddedPrompt);
-                string prompt = EmbeddedPrompts.GetPrompt(embeddedPrompt);
-                Console.WriteLine(prompt);
-                Assert.IsTrue(prompt.Length > 0);
-            }
+            string prompt =
+                PromptCompositionBuilder.CreateDirectivesPrompt();
+
+            Console.WriteLine(prompt);
+
+            Assert.IsTrue(prompt.Length > 0);
         }
 
 

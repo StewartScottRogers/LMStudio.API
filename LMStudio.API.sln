@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompt.Library.UnitTests"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.Generated.SolutionPrompts", "LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.shproj", "{960BCE4B-1536-4A67-8A98-7D4BC2B7D952}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.Generated.SolutionPrompts.Builder", "LMStudio.Generated.SolutionPrompts.Builder\LMStudio.Generated.SolutionPrompts.Builder.csproj", "{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,12 +45,17 @@ Global
 		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AiPrompt.Library\AiPrompt.Library.projitems*{5f1e3573-d407-449f-acfc-a114d949b959}*SharedItemsImports = 13
+		AiPrompt.Library\AiPrompt.Library.projitems*{6ff25ac3-ff93-4b12-aa7c-2590b84a94cd}*SharedItemsImports = 5
 		AiPrompt.Library\AiPrompt.Library.projitems*{8f4867ac-ea04-402f-90ec-4d40b84c0d3f}*SharedItemsImports = 5
 		LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.projitems*{960bce4b-1536-4a67-8a98-7d4bc2b7d952}*SharedItemsImports = 13
 	EndGlobalSection

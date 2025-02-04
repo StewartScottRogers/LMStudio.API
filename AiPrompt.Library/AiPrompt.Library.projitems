@@ -32,6 +32,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedPrompts.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)ProjectPrompts\PromptCompositionBuilder.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PromptCompositionBuilder.cs" />
   </ItemGroup>
 </Project>

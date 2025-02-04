@@ -14,6 +14,3 @@ Deliver the solution as a Visual Studio project directory containing:
 - The solution should be self-contained, adhering strictly to the guidelines provided.
 - Assume that reasoning and clarity in naming conventions and comments is as important as functional correctness.
 - The solution should be fully executable and compilable without any additional coding.
-
-----------------------------------------------------------------------------------------------------------------------------
-

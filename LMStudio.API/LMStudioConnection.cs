@@ -99,8 +99,7 @@ namespace LMStudio.API
                     );
 
             return new TokenShuttle(
-                tokens,
-                dotnetInteractiveMiddlewareAgent
+                tokens
             );
         }
     }

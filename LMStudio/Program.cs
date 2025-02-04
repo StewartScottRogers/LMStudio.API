@@ -1,6 +1,9 @@
 ﻿using LMStudio.API;
+using LMStudio.API.Extensions;
 using LMStudio.API.Models;
+using Microsoft.CodeAnalysis;
 using System;
+using System.Collections.Generic;
 
 // "mistral-small-24b-instruct-2501"
 // "phi-4"
@@ -33,14 +36,30 @@ finally
 
 Console.WriteLine();
 Console.WriteLine(new string('-', 80));
-string input = tokenShuttle.ToString();
+string input
+    = tokenShuttle.ToString();
 Console.WriteLine(input);
 Console.WriteLine();
 Console.WriteLine(new string('-', 80));
-string output = tokenShuttle.Compile();
+IEnumerable<string> codeBlocks
+    = tokenShuttle.ToCodeBlocks();
 Console.WriteLine();
-Console.WriteLine(output);
-Console.WriteLine();
+foreach (string codeBlock in codeBlocks)
+{
+    Console.WriteLine(codeBlock);
+    Console.WriteLine();
+    Console.WriteLine(new string('-', 80));
+    SyntaxTree syntaxTree
+        = codeBlock.CompileSyntaxTree();
+    Console.WriteLine(new string('.', 80));
+    string formattedSyntaxTree
+        = syntaxTree.GetRoot()
+            .ToFormattedSyntaxTree();
+    Console.WriteLine(formattedSyntaxTree);
+    Console.WriteLine(new string('-', 80));
+}
+
+
 Console.WriteLine(new string('-', 80));
 
 

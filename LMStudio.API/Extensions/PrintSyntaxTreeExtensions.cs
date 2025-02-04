@@ -7,26 +7,26 @@ namespace LMStudio.API.Extensions
 {
     public static class PrintSyntaxTreeExtensions
     {
-        public static string PrintSyntaxTree(this SyntaxNode node, string indent = "", StringBuilder stringBuilder = null)
+        public static string ToFormattedSyntaxTree(this SyntaxNode syntaxNode, string indent = "", StringBuilder stringBuilder = null)
         {
             if (stringBuilder is null)
                 stringBuilder = new StringBuilder();
 
             stringBuilder
-                .AppendLine($"{indent}{node.Kind()} - {node}");
+                .AppendLine($"{indent}{syntaxNode.Kind()} - {syntaxNode}");
 
-            foreach (SyntaxNodeOrToken syntaxNodeOrToken in node.ChildNodesAndTokens())
+            foreach (SyntaxNodeOrToken syntaxNodeOrToken in syntaxNode.ChildNodesAndTokens())
                 if (syntaxNodeOrToken.IsNode)
                 {
-                    SyntaxNode? syntaxNode =
+                    SyntaxNode? childSyntaxNode =
                         syntaxNodeOrToken
                                 .AsNode();
 
-                    if (syntaxNode is not null)
+                    if (childSyntaxNode is not null)
                         stringBuilder
                             .AppendLine(
-                                syntaxNode
-                                    .PrintSyntaxTree(
+                                childSyntaxNode
+                                    .ToFormattedSyntaxTree(
                                         indent + "  ",
                                         stringBuilder
                                         )

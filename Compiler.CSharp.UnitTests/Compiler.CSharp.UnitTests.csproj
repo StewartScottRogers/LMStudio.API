@@ -1,12 +1,16 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="MSTest.Sdk/3.6.4">
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
+    <UseVSTest>true</UseVSTest>
     <RootNamespace>Compiler.CSharp</RootNamespace>
   </PropertyGroup>
-
+  
   <ItemGroup>
     <PackageReference Include="AutoGen.DotnetInteractive" Version="0.2.1" />
   </ItemGroup>
-
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Compiler.CSharp\Compiler.CSharp.csproj" />
+  </ItemGroup>
 </Project>

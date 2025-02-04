@@ -5,6 +5,8 @@ VisualStudioVersion = 17.12.35707.178 d17.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.API", "LMStudio.API\LMStudio.API.csproj", "{6704BBE0-43E9-4209-9B2E-BBEC117C1940}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio", "LMStudio\LMStudio.csproj", "{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{6704BBE0-43E9-4209-9B2E-BBEC117C1940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6704BBE0-43E9-4209-9B2E-BBEC117C1940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6704BBE0-43E9-4209-9B2E-BBEC117C1940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

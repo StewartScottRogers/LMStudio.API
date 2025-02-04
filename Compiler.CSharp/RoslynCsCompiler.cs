@@ -1,7 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 
-namespace LMStudio.API
+namespace Compiler.CSharp
 {
     public static class RoslynCsCompiler
     {

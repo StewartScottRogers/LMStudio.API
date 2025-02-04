@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Compiler.CSharp\Compiler.CSharp.csproj" />
     <ProjectReference Include="..\LMStudio.API\LMStudio.API.csproj" />
   </ItemGroup>
 

@@ -3,9 +3,9 @@ using Microsoft.CodeAnalysis.CSharp;
 using System.Text;
 
 
-namespace LMStudio.API.Extensions
+namespace Compiler.CSharp.Extensions
 {
-    public static class PrintSyntaxTreeExtensions
+    public static class ToMessageCodeBlocksExtensions
     {
         public static string ToFormattedSyntaxTree(this SyntaxNode syntaxNode, int indent = 0, StringBuilder stringBuilder = null)
         {

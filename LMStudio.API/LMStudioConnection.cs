@@ -50,7 +50,7 @@ namespace LMStudio.API
 
                             string[] codeBlocks
                                 = lastMessage
-                                    .ExtractMessageCodeBlocks(@"```csharp", @"```")
+                                    .ToMessageCodeBlocks(@"```csharp", @"```")
                                         .ToArray();
 
                             if (codeBlocks.Length > 0)

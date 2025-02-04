@@ -1,9 +1,12 @@
-﻿using LMStudio.API;
+﻿using Compiler.CSharp;
+using LMStudio.API;
 using LMStudio.API.Extensions;
 using LMStudio.API.Models;
 using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;
+using Compiler.CSharp;
+using Compiler.CSharp.Extensions;
 
 // "mistral-small-24b-instruct-2501"
 // "phi-4"

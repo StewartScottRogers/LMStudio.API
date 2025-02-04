@@ -7,7 +7,7 @@ namespace LMStudio.API.Extensions
 {
     public static class ExtractMessageCodeBlocksExtensions
     {
-        public static IEnumerable<string> ExtractMessageCodeBlocks(this IMessage message, string codeBlockPrefix, string codeBlockSuffix)
+        public static IEnumerable<string> ToMessageCodeBlocks(this IMessage message, string codeBlockPrefix, string codeBlockSuffix)
         {
             string text = message.GetContent() ?? string.Empty;
             if (string.IsNullOrWhiteSpace(text))

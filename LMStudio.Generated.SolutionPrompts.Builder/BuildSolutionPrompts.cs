@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Diagnostics.Contracts;
 using System.IO;
+using System.Text;
 
 namespace AiPrompt.Library
 {
@@ -22,6 +24,18 @@ namespace AiPrompt.Library
             }
 
             return string.Empty;
+        }
+
+        public static void WriteAllText(string path, string contents)
+        {
+
+            Contract.Requires(path != null);
+            Contract.Requires(path.Length > 0);
+
+            Encoding encoding = Encoding.UTF8;
+
+            using (StreamWriter sw = new StreamWriter(path, false, encoding))
+                sw.Write(contents);
         }
 
     }

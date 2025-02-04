@@ -34,27 +34,22 @@ finally
     Console.BackgroundColor = InitalBackgoundColor;
 }
 
-Console.WriteLine();
 Console.WriteLine(new string('-', 80));
 string input
     = tokenShuttle.ToString();
 Console.WriteLine(input);
-Console.WriteLine();
 Console.WriteLine(new string('-', 80));
 IEnumerable<string> codeBlocks
     = tokenShuttle.ToCodeBlocks();
-Console.WriteLine();
 foreach (string codeBlock in codeBlocks)
 {
     Console.WriteLine(codeBlock);
-    Console.WriteLine();
-    Console.WriteLine(new string('-', 80));
     SyntaxTree syntaxTree
         = codeBlock.CompileSyntaxTree();
     Console.WriteLine(new string('.', 80));
     string formattedSyntaxTree
         = syntaxTree.GetRoot()
-            .ToFormattedSyntaxTree();
+            .ToFormattedSyntaxTree().Trim();
     Console.WriteLine(formattedSyntaxTree);
     Console.WriteLine(new string('-', 80));
 }

@@ -50,7 +50,7 @@ namespace LMStudio.API.Models
                         );
 
             foreach (string match in matchCollection)
-                yield return match;
+                yield return match.Trim();
         }
 
         IEnumerator IEnumerable.GetEnumerator()

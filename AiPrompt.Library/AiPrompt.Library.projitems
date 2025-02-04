@@ -9,6 +9,14 @@
     <Import_RootNamespace>AiPrompt.Library</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\006.CodeDocumentation.Directives.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\007.UnitTesting.Directives.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\004.ProgramingConstructs.Directives.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\003.LibraryUsage.Directives.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\002.CodingStyles.Directives.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\001.DotNetVersion.Directives.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\005.FileSystemStructure.Directives.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\008.SolutionSteps.Directives.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Cache Coherent Buffer Manager AI Prompt.Project.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Heap Data Structure AI Prompt.Project.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Linked List Data Structure AI Prompt.Project.txt" />
@@ -21,8 +29,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Libraries\Solutions POSIX IO AI Prompt.Project.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Microservices\HttpServer.BatchUploader AI Prompt.Project.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Persistence\lComplete Library to provides X-base Functionality.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SolutionPrompts\ARM Assembly Code AI Prompt.Solution.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)SolutionPrompts\C# Solutions AI Prompt.Solution.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedPrompts.cs" />

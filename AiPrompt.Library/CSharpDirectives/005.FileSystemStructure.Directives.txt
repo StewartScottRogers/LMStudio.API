@@ -1,0 +1,7 @@
+Create a complete .NET 9.0 Solution in Visual Studio using C#. Ensure the solution is fully compilable and executable without additional coding. Follow these guidelines meticulously:
+
+- **File System Structure**: 
+ - Create separate files for each class.
+ - Create separate files for each interface.
+ - Create separate files for each enumeration.
+ - Create separate files for each record.

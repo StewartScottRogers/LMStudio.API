@@ -1,0 +1,3 @@
+- **Library Usage**:
+ - Use only the Microsoft Basic Component Library.
+ - Use formally defined types.

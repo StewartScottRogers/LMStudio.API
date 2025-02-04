@@ -1,4 +1,6 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 using System.Reflection;
 
 namespace AiPrompts
@@ -10,7 +12,9 @@ namespace AiPrompts
             string[] embeddedResources
                 = Assembly
                     .GetExecutingAssembly()
-                        .GetManifestResourceNames();
+                        .GetManifestResourceNames()
+                            .OrderBy(manifestResourceNames => manifestResourceNames.ToString())
+                                .ToArray();
 
             foreach (string embeddedResource in embeddedResources)
                 if (embeddedResource.EndsWith(endsWith))

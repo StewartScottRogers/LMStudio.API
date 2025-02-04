@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace AiPrompt.Library
 {
@@ -9,11 +10,11 @@ namespace AiPrompt.Library
     public sealed class GetAllEmbeddedPrompts
     {
         [TestMethod]
-        public void GetAllSolutionPathsUnitTest()
+        public void GetAllDirectivesPathsUnitTest()
         {
 
             IEnumerable<string> embeddedPrompts
-                = EmbeddedPrompts.GetAllPaths("Solution.txt");
+                = EmbeddedPrompts.GetAllPaths("Directives.txt");
 
             foreach (string embeddedPrompt in embeddedPrompts)
             {
@@ -37,14 +38,14 @@ namespace AiPrompt.Library
         }
 
         [TestMethod]
-        public void GetAllSolutionPromptContentUnitTest()
+        public void GetAllDirectivesPromptContentUnitTest()
         {
             IEnumerable<string> embeddedPrompts
-                = EmbeddedPrompts.GetAllPaths("Solution.txt");
+                = EmbeddedPrompts.GetAllPaths("Directives.txt");
 
             foreach (string embeddedPrompt in embeddedPrompts)
             {
-                Console.WriteLine(embeddedPrompt);
+                Debug.WriteLine(embeddedPrompt);
                 string prompt = EmbeddedPrompts.GetPrompt(embeddedPrompt);
                 Console.WriteLine(prompt);
                 Assert.IsTrue(prompt.Length > 0);
@@ -60,7 +61,7 @@ namespace AiPrompt.Library
 
             foreach (string embeddedPrompt in embeddedPrompts)
             {
-                Console.WriteLine(embeddedPrompt);
+                Debug.WriteLine(embeddedPrompt);
                 string prompt = EmbeddedPrompts.GetPrompt(embeddedPrompt);
                 Console.WriteLine(prompt);
                 Assert.IsTrue(prompt.Length > 0);

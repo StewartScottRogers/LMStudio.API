@@ -1,0 +1,19 @@
+# Solution Steps
+1. Initialize a new Solution in Visual Studio.
+2. Define the project structure ensuring each class, interface, enumeration, and record is in its own file.
+3. Write code using the described programming and styling guidelines.
+4. Develop unit tests using Microsoft's Unit Test Framework to validate functionality, focusing on complex data input.
+5. Include comprehensive comments for any non-trivial logic or structure to enhance understanding.
+
+# Output Format
+Deliver the solution as a Visual Studio project directory containing: 
+- All necessary code files following the naming and file organization conventions.
+- A README or documentation summarizing the project and key points of logic for easy comprehension.
+
+# Notes
+- The solution should be self-contained, adhering strictly to the guidelines provided.
+- Assume that reasoning and clarity in naming conventions and comments is as important as functional correctness.
+- The solution should be fully executable and compilable without any additional coding.
+
+----------------------------------------------------------------------------------------------------------------------------
+

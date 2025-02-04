@@ -3,7 +3,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
-namespace Compiler.CSharp.UnitTests
+namespace Compiler.CSharp
 {
     [TestClass]
     public sealed class CShardUnitTests

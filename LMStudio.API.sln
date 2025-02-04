@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.CSharp", "Compiler
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.CSharp.UnitTests", "Compiler.CSharp.UnitTests\Compiler.CSharp.UnitTests.csproj", "{1947318B-3E5D-4C3E-901E-EFC08B1B6589}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AiPrompt.Library", "AiPrompt.Library\AiPrompt.Library.shproj", "{5F1E3573-D407-449F-ACFC-A114D949B959}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompt.Library.UnitTests", "AiPrompt.Library.UnitTests\AiPrompt.Library.UnitTests.csproj", "{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,8 +37,16 @@ Global
 		{1947318B-3E5D-4C3E-901E-EFC08B1B6589}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1947318B-3E5D-4C3E-901E-EFC08B1B6589}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1947318B-3E5D-4C3E-901E-EFC08B1B6589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		AiPrompt.Library\AiPrompt.Library.projitems*{5f1e3573-d407-449f-acfc-a114d949b959}*SharedItemsImports = 13
+		AiPrompt.Library\AiPrompt.Library.projitems*{8f4867ac-ea04-402f-90ec-4d40b84c0d3f}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

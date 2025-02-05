@@ -9,17 +9,19 @@
     <Import_RootNamespace>LMStudio.Generated.SolutionPrompts</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Cache Coherent Buffer Manager AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Heap Data Structure AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Linked List Data Structure AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Merge Sorted Lists AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Stack Data Structure AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Lexers.Pascale Language Lexer AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Lexers.Python Lexer AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Lexers.Roslyn Ai Tokenizer AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Lexers.Tiny Language Lexer AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Libraries.Solutions POSIX IO AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Microservices.HttpServer.BatchUploader AI Prompt.Project.txt" />
-    <Content Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Persistence.lComplete Library to provides X-base Functionality.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Heap Data Structure AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Linked List Data Structure AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Merge Sorted Lists AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.DataStructures.Stack Data Structure AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Lexers.Pascale Language Lexer AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Lexers.Python Lexer AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Lexers.Roslyn Ai Tokenizer AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Lexers.Tiny Language Lexer AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Libraries.Solutions POSIX IO AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Microservices.HttpServer.BatchUploader AI Prompt.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\AiPrompt.Library.ProjectPrompts.Persistence.lComplete Library to provides X-base Functionality.Project.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)EmbeddedPrompts.cs" />
   </ItemGroup>
 </Project>

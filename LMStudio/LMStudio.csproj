@@ -10,4 +10,6 @@
     <ProjectReference Include="..\LMStudio.API\LMStudio.API.csproj" />
   </ItemGroup>
 
+  <Import Project="..\LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.projitems" Label="Shared" />
+
 </Project>

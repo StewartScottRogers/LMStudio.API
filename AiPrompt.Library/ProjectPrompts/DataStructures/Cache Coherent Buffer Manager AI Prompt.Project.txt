@@ -1,9 +1,0 @@
-----------------------------------------------------------------------------------------------------------------------------
-
-# Application Description
-
-	** Cache Coherent Buffer Manager
-	** Implement Dynamic Buffer Management.
-	** Implement Snoopy protocol
-	** Implement Multi-core system support.
-	** Implement Cache coherence protocol messages.

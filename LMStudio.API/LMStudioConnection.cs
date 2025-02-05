@@ -18,7 +18,7 @@ namespace LMStudio.API
 {
     public static class LMStudioConnection
     {
-        public static TokenShuttle FetchAiReplies(string endpoint, string aiModel, string message, string apiKey = "api-key-does-not-mater-for-lmstudio")
+        public static TokenShuttle FetchAiReplies(string endpoint, string aiModel, string prompt, string apiKey = "api-key-does-not-mater-for-lmstudio")
         {
             OpenAIClient openAIClient
                = new OpenAIClient(
@@ -92,7 +92,7 @@ namespace LMStudio.API
                 openAIChatAgent
                     .GenerateStreamingReplyAsync(
                         new[] {
-                            new TextMessage(Role.User, message)
+                            new TextMessage(Role.User, prompt)
                         }
                     ).ToBlockingEnumerable()
                         .Select(token => token.GetContent()

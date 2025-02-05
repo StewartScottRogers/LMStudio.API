@@ -17,7 +17,6 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\001.DotNetVersion.Directives.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\005.FileSystemStructure.Directives.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\008.SolutionSteps.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Cache Coherent Buffer Manager AI Prompt.Project.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Heap Data Structure AI Prompt.Project.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Linked List Data Structure AI Prompt.Project.txt" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Merge Sorted Lists AI Prompt.Project.txt" />

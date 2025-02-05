@@ -1,6 +1,7 @@
 ﻿using AiPrompts;
 using Compiler.CSharp;
 using Compiler.CSharp.Extensions;
+using LMStudio;
 using LMStudio.API;
 using LMStudio.API.Models;
 using Microsoft.CodeAnalysis;
@@ -13,10 +14,11 @@ using System.Linq;
 // "qwen2.5-coder-32b-instruct"
 // "deepseek-r1-distill-llama-8b"
 
-
+Random randomizer = new Random();
 IEnumerable<string> solutionPrompts
     = EmbeddedPrompts.GetAllPaths()
-        .Select(path => EmbeddedPrompts.GetPrompt(path));
+        .OrderBy((item) => randomizer.NextDouble()).ToArray()
+            .Select(path => EmbeddedPrompts.GetPrompt(path));
 
 foreach (string solutionPrompt in solutionPrompts)
 {
@@ -28,16 +30,10 @@ foreach (string solutionPrompt in solutionPrompts)
                 prompt: solutionPrompt
             );
 
-    ConsoleColor InitialBackgroundColor = Console.BackgroundColor;
-    try
+    using (TokenConsole tokenConsole = new TokenConsole(Console.BackgroundColor))
     {
-        long index = 0;
         foreach (string token in tokenShuttle)
-            ProcessToken(index++, token, InitialBackgroundColor);
-    }
-    finally
-    {
-        Console.BackgroundColor = InitialBackgroundColor;
+            tokenConsole.ProcessToken(token);
     }
 
     Console.WriteLine(new string('-', 80));
@@ -54,13 +50,18 @@ foreach (string solutionPrompt in solutionPrompts)
     foreach (string codeBlock in codeBlocks)
     {
         Console.WriteLine(codeBlock);
+
         SyntaxTree syntaxTree
             = codeBlock.CompileSyntaxTree();
+
         Console.WriteLine(new string('.', 80));
+
         string formattedSyntaxTree
             = syntaxTree.GetRoot()
                 .ToFormattedSyntaxTree().Trim();
+
         Console.WriteLine(formattedSyntaxTree);
+
         Console.WriteLine(new string('-', 80));
     }
 
@@ -68,37 +69,3 @@ foreach (string solutionPrompt in solutionPrompts)
     Console.WriteLine(new string('-', 80));
 }
 
-static void ProcessToken(long index, string token, ConsoleColor initialBackgroundColor)
-{
-    string strippedToken = RemoveTrailingNewlines(token);
-    if (strippedToken.Count() < token.Count())
-    {
-        WriteColerizedToken(index, strippedToken);
-
-        int trailingNewLineLength = token.Length - strippedToken.Length;
-        string newLines = new string('\n', trailingNewLineLength);
-        Console.BackgroundColor = initialBackgroundColor;
-        Console.Write(newLines);
-    }
-    else
-    {
-        WriteColerizedToken(index, token);
-    }
-}
-
-static string RemoveTrailingNewlines(string token)
-{
-    while (token.EndsWith("\n"))
-        return RemoveTrailingNewlines(token.Substring(0, token.Length - 1));
-    return token;
-}
-
-static void WriteColerizedToken(long index, string token)
-{
-    bool oddNumber = (index % 2 == 0);
-    if (oddNumber)
-        Console.BackgroundColor = ConsoleColor.DarkBlue;
-    else
-        Console.BackgroundColor = ConsoleColor.DarkGreen;
-    Console.Write(token);
-}

@@ -1,9 +1,9 @@
 ﻿using AiPrompts;
 using Compiler.CSharp;
 using Compiler.CSharp.Extensions;
-using LMStudio;
 using LMStudio.API;
 using LMStudio.API.Models;
+using LMStudio.Consoles;
 using Microsoft.CodeAnalysis;
 using System;
 using System.Collections.Generic;

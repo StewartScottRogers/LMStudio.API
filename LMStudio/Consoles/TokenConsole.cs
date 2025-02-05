@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace LMStudio
+namespace LMStudio.Consoles
 {
     public class TokenConsole : IDisposable
     {
@@ -47,7 +47,7 @@ namespace LMStudio
 
         private void WriteColerizedToken(string token)
         {
-            bool oddNumber = (index % 2 == 0);
+            bool oddNumber = index % 2 == 0;
             if (oddNumber)
                 Console.BackgroundColor = OddBackgroundColor;
             else

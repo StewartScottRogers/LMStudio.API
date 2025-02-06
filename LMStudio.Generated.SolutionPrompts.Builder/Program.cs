@@ -2,6 +2,7 @@
 using AiPrompt.Library.ProjectPrompts;
 using System;
 using System.IO;
+using System.Linq;
 
 string targetDirectory
      = BuildSolutionPrompts
@@ -13,7 +14,7 @@ string directivesPrompt
 
 var projectPromptTuples
     = PromptCompositionBuilder
-        .CreateProjectPrompt();
+        .CreateProjectPrompt().ToArray();
 
 string promptsFolder = Path.Combine(targetDirectory, "Prompts");
 if (!Directory.Exists(promptsFolder))
@@ -23,8 +24,12 @@ foreach (var projectPromptTuple in projectPromptTuples)
 {
     Console.WriteLine($"{nameof(projectPromptTuple)}: \r\n{directivesPrompt}/r/n{projectPromptTuple.ProjectPromptContent}");
 
-    var targetFileParth
-        = Path.Combine(promptsFolder, projectPromptTuple.ProjectPromptName);
+    int prefixLength = "AiPrompt.Library.ProjectPrompts.".Count();
+    string projectPromptName = projectPromptTuple.ProjectPromptName;
+    string projectPromptNameTrimmed = projectPromptName.Remove(0, prefixLength);
+
+    string targetFileParth
+        = Path.Combine(promptsFolder, projectPromptNameTrimmed);
 
     BuildSolutionPrompts.WriteAllText(targetFileParth, directivesPrompt + projectPromptTuple.ProjectPromptContent);
 

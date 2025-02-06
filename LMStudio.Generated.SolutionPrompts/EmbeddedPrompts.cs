@@ -5,9 +5,9 @@ using System.Reflection;
 
 namespace AiPrompts
 {
-    public static class EmbeddedPrompts
+    public static class EmbeddedPrompts 
     {
-        public static IEnumerable<string> GetAllPaths(string endsWith = ".txt")
+        public static IEnumerable<string> GetAllPaths(string endsWith)
         {
             string[] embeddedResources
                 = Assembly

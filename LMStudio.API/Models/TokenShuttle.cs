@@ -12,12 +12,12 @@ namespace LMStudio.API.Models
 
         private StringBuilder StringBuilder = new StringBuilder();
 
-        public TokenShuttle(
-            IEnumerable<string> tokens
-        )
+        public TokenShuttle(IEnumerable<string> tokens)
         {
             Tokens = tokens;
         }
+
+
         public IEnumerator<string> GetEnumerator()
         {
             foreach (var token in Tokens)
@@ -29,7 +29,7 @@ namespace LMStudio.API.Models
 
         public IEnumerable<string> ToCodeBlocks(string codeBlockPrefix = @"```csharp", string codeBlockSuffix = @"```")
         {
-            string text = ToString();
+            string text = StringBuilder.ToString();
             if (string.IsNullOrWhiteSpace(text))
                 yield break;
 
@@ -51,6 +51,11 @@ namespace LMStudio.API.Models
                 yield return match.Trim();
         }
 
+        public string Content()
+        {
+            return StringBuilder.ToString();
+        }
+
         IEnumerator IEnumerable.GetEnumerator()
         {
             foreach (var token in Tokens)
@@ -58,11 +63,6 @@ namespace LMStudio.API.Models
                 StringBuilder.Append(token.ToString());
                 yield return token;
             }
-        }
-
-        override public string ToString()
-        {
-            return StringBuilder.ToString();
         }
     }
 }

@@ -20,7 +20,7 @@ namespace LMStudio.API.Models
 
         public IEnumerator<string> GetEnumerator()
         {
-            foreach (var token in Tokens)
+            foreach (string token in Tokens)
             {
                 StringBuilder.Append(token.ToString());
                 yield return token;

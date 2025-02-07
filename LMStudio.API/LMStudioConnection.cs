@@ -3,6 +3,7 @@ using AutoGen.DotnetInteractive;
 using AutoGen.DotnetInteractive.Extension;
 using AutoGen.OpenAI;
 using AutoGen.OpenAI.Extension;
+using Google.Cloud.AIPlatform.V1;
 using LMStudio.API.Extensions;
 using LMStudio.API.Models;
 using Microsoft.DotNet.Interactive;
@@ -88,19 +89,77 @@ namespace LMStudio.API
                         }
                     );
 
-            IEnumerable<string> tokens =
-                openAIChatAgent
+
+            IEnumerable<IMessage> messages
+                = openAIChatAgent
                     .GenerateStreamingReplyAsync(
                         new[] {
                             new TextMessage(Role.User, prompt)
                         }
-                    ).ToBlockingEnumerable()
-                        .Select(token => token.GetContent()
-                    );
+                    ).ToBlockingEnumerable();
 
             return new TokenShuttle(
-                tokens
+                ExtractContentFromMessages(messages)
             );
+        }
+
+        private static IEnumerable<string> ExtractContentFromMessages(IEnumerable<IMessage> messages)
+        {
+            if (messages is null)
+            {
+                yield return "[MESSAGE STREAM NULL]";
+                yield break;
+            }
+
+            using (IEnumerator<IMessage> messageEnumerator = messages.GetEnumerator())
+            {
+                while (true)
+                {
+                    string content
+                        = ExtractContentFromMessage(messageEnumerator);
+
+                    if (content is null)
+                        yield break;
+
+                    yield return content;
+                }
+            }
+        }
+
+
+        private static string ExtractContentFromMessage(IEnumerator<IMessage> messageEnumerator)
+        {
+            try
+            {
+                if (!messageEnumerator.MoveNext())
+                    return null;
+
+                IMessage message
+                    = messageEnumerator.Current;
+
+                if (message is null)
+                    return "[NULL '.Current' MESSAGE]";
+
+                string messageContent;
+                try
+                {
+                    messageContent = message.GetContent();
+                }
+                catch (Exception exception)
+                {
+                    return $"[MESSAGE '.GetContent()' EXCEPTION: {exception.Message}]";
+                }
+
+                if (messageContent is null)
+                    return "[NULL MESSAGE CONTENT]";
+                else
+                    return messageContent.ToString();
+
+            }
+            catch (Exception exception)
+            {
+                return $"[ 'LM Studios Context Wondow is probably to small. Increase The Context Window Size!' MESSAGE EXCEPTION: {exception.Message}]";
+            }
         }
     }
 }

@@ -55,7 +55,7 @@ internal class Program
                 = LMStudioConnection
                     .FetchAiReplies(
                         endpoint: "http://192.168.1.7:1232",
-                        aiModel: "deepseek-r1-distill-llama-8b",
+                        aiModel: "qwen2.5-coder-32b-instruct",
                         prompt: solutionPrompt
                     );
 
@@ -72,8 +72,11 @@ internal class Program
 
             Console.WriteLine(content);
 
+            int prefixLength = "LMStudio.Prompts.".Count();
+            string embeddedPartialSolutionFileNameTrimmed = embeddedPartialSolutionFileName.Remove(0, prefixLength);
+
             string embeddedOutputFileName
-                    = embeddedPartialSolutionFileName + ".output.txt";
+                    = embeddedPartialSolutionFileNameTrimmed + ".output.txt";
 
             string embeddedOutputFilePath
                     = Path.Combine(solutionFolder, embeddedOutputFileName);
@@ -92,7 +95,7 @@ internal class Program
             foreach (string codeBlock in codeBlocks)
             {
                 string embeddedSolutionFileName
-                    = embeddedPartialSolutionFileName + $".{index++:000}" + ".cs";
+                    = embeddedPartialSolutionFileNameTrimmed + $".{index++:000}" + ".cs";
 
                 string embeddedSolutionFilePath
                     = Path.Combine(solutionFolder, embeddedSolutionFileName);

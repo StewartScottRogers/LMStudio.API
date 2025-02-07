@@ -158,7 +158,7 @@ namespace LMStudio.API
             }
             catch (Exception exception)
             {
-                return $"[ 'LM Studios Context Wondow is probably to small. Increase The Context Window Size!' MESSAGE EXCEPTION: {exception.Message}]";
+                return $"[ 'LM Studios Context Window is probably to small. Increase The Context Window Size!' MESSAGE EXCEPTION: {exception.Message}]";
             }
         }
     }

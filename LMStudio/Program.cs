@@ -5,23 +5,24 @@ using LMStudio;
 using LMStudio.API;
 using LMStudio.API.Models;
 using LMStudio.Consoles;
-using Markdig.Syntax;
 using Microsoft.CodeAnalysis;
 using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using static Google.Rpc.Context.AttributeContext.Types;
 
-// "mistral-small-24b-instruct-2501"
-// "phi-4"
-// "qwen2.5-coder-32b-instruct"
-// "deepseek-r1-distill-llama-8b"
 
 internal class Program
 {
     private static void Main(string[] args)
     {
+
+        // "mistral-small-24b-instruct-2501"
+        // "phi-4"
+        // "qwen2.5-coder-32b-instruct"
+        // "deepseek-r1-distill-llama-8b"
+
+        string aiModel = "qwen2.5-coder-32b-instruct";
+
         Random randomizer = new Random();
         string[] embeddedProjectFilePaths
             = EmbeddedPrompts.GetAllPaths(endsWith: ".Project.txt")
@@ -37,6 +38,12 @@ internal class Program
         if (!Directory.Exists(solutionFolder))
             Directory.CreateDirectory(solutionFolder);
 
+
+        string outputFolder = Path.Combine(solutionFolder, aiModel);
+        if (!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
+
         foreach (string embeddedProjectFilePath in embeddedProjectFilePaths)
         {
             Console.WriteLine(new string('=', 80));
@@ -48,6 +55,8 @@ internal class Program
             Console.WriteLine(embeddedPartialSolutionFileName);
             Console.WriteLine(new string('=', 80));
 
+
+
             string solutionPrompt
                 = EmbeddedPrompts.GetPrompt(embeddedProjectFilePath);
 
@@ -55,7 +64,7 @@ internal class Program
                 = LMStudioConnection
                     .FetchAiReplies(
                         endpoint: "http://192.168.1.7:1232",
-                        aiModel: "qwen2.5-coder-32b-instruct",
+                        aiModel: aiModel,
                         prompt: solutionPrompt
                     );
 
@@ -64,6 +73,8 @@ internal class Program
                 foreach (string token in tokenShuttle)
                     tokenConsole.ProcessToken(token);
             }
+
+
 
             Console.WriteLine(new string('-', 80));
 
@@ -76,10 +87,13 @@ internal class Program
             string embeddedPartialSolutionFileNameTrimmed = embeddedPartialSolutionFileName.Remove(0, prefixLength);
 
             string embeddedOutputFileName
-                    = embeddedPartialSolutionFileNameTrimmed + ".output.txt";
+                    = Path
+                        .GetFileNameWithoutExtension(
+                            embeddedPartialSolutionFileNameTrimmed
+                         ) + ".output.md";
 
             string embeddedOutputFilePath
-                    = Path.Combine(solutionFolder, embeddedOutputFileName);
+                    = Path.Combine(outputFolder, embeddedOutputFileName);
 
             BuildCsFiles.WriteAllText(embeddedOutputFilePath, content);
 
@@ -98,7 +112,7 @@ internal class Program
                     = embeddedPartialSolutionFileNameTrimmed + $".{index++:000}" + ".cs";
 
                 string embeddedSolutionFilePath
-                    = Path.Combine(solutionFolder, embeddedSolutionFileName);
+                    = Path.Combine(outputFolder, embeddedSolutionFileName);
 
 
                 Console.WriteLine(embeddedSolutionFilePath);

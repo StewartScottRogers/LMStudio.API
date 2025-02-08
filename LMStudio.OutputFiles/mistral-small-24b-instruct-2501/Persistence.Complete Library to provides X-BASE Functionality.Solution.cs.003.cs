@@ -1,0 +1,1 @@
+﻿var records = XBaseRecord.ReadAllRecords();

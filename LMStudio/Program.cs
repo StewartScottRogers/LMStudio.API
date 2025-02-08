@@ -21,51 +21,60 @@ internal class Program
         // "qwen2.5-coder-32b-instruct"
         // "deepseek-r1-distill-llama-8b"
 
-        string aiModel = "qwen2.5-coder-32b-instruct";
+        string aiModel = "deepseek-r1-distill-llama-8b";
 
-        Random randomizer = new Random();
-        string[] embeddedProjectFilePaths
-            = EmbeddedPrompts.GetAllPaths(endsWith: ".Project.txt")
-                .OrderBy((item) => randomizer.NextDouble())
-                    .ToArray();
+        string[] projectFilePaths
+            = EmbeddedPrompts.GetAllPaths(endsWith: ".Project.md")
+                .ToArray();
 
         string targetDirectory
-            = BuildCsFiles
+            = BuildOutputFiles
                 .SearchForDirectory("LMStudio.OutputFiles", 6);
 
 
-        string solutionFolder = targetDirectory;
-        if (!Directory.Exists(solutionFolder))
-            Directory.CreateDirectory(solutionFolder);
-
-
-        string outputFolder = Path.Combine(solutionFolder, aiModel);
+        string outputFolder = Path.Combine(targetDirectory, aiModel);
         if (!Directory.Exists(outputFolder))
             Directory.CreateDirectory(outputFolder);
 
 
-        foreach (string embeddedProjectFilePath in embeddedProjectFilePaths)
+        foreach (string projectFilePath in projectFilePaths)
         {
             Console.WriteLine(new string('=', 80));
-            Console.WriteLine(embeddedProjectFilePath);
+            Console.WriteLine(projectFilePath);
 
-            string embeddedPartialSolutionFileName
-                = Path.GetFileNameWithoutExtension(Path.GetFileNameWithoutExtension(embeddedProjectFilePath)) + ".Solution.cs";
+            string embeddedPartialSolutionOutputFileName
+                = Path.GetFileNameWithoutExtension(Path.GetFileNameWithoutExtension(projectFilePath)) + ".Solution.cs";
 
-            Console.WriteLine(embeddedPartialSolutionFileName);
+            Console.WriteLine(embeddedPartialSolutionOutputFileName);
             Console.WriteLine(new string('=', 80));
 
 
+            string inputContentFileNameTrimmed
+                = embeddedPartialSolutionOutputFileName
+                    .Remove(0, "LMStudio.Prompts.".Count());
 
-            string solutionPrompt
-                = EmbeddedPrompts.GetPrompt(embeddedProjectFilePath);
+            string inputContent
+                = EmbeddedPrompts.GetPrompt(projectFilePath);
+
+            string inputContentFileName
+                = Path
+                    .GetFileNameWithoutExtension(
+                        inputContentFileNameTrimmed
+                     ) + ".input.md";
+
+            string inputContentFilePath
+                    = Path.Combine(outputFolder, inputContentFileName);
+
+            BuildOutputFiles.WriteAllText(inputContentFilePath, inputContent);
+
+
 
             TokenShuttle tokenShuttle
                 = LMStudioConnection
                     .FetchAiReplies(
                         endpoint: "http://192.168.1.7:1232",
                         aiModel: aiModel,
-                        prompt: solutionPrompt
+                        prompt: inputContent
                     );
 
             using (TokenConsole tokenConsole = new TokenConsole(Console.BackgroundColor))
@@ -78,24 +87,21 @@ internal class Program
 
             Console.WriteLine(new string('-', 80));
 
-            string content
-                = tokenShuttle.Content();
+            string promptOutputContent
+                = tokenShuttle.PromptOutputContent();
 
-            Console.WriteLine(content);
-
-            int prefixLength = "LMStudio.Prompts.".Count();
-            string embeddedPartialSolutionFileNameTrimmed = embeddedPartialSolutionFileName.Remove(0, prefixLength);
+            Console.WriteLine(promptOutputContent);
 
             string embeddedOutputFileName
                     = Path
                         .GetFileNameWithoutExtension(
-                            embeddedPartialSolutionFileNameTrimmed
+                            inputContentFileNameTrimmed
                          ) + ".output.md";
 
             string embeddedOutputFilePath
                     = Path.Combine(outputFolder, embeddedOutputFileName);
 
-            BuildCsFiles.WriteAllText(embeddedOutputFilePath, content);
+            BuildOutputFiles.WriteAllText(embeddedOutputFilePath, promptOutputContent);
 
             Console.WriteLine("");
             Console.WriteLine(new string('-', 80));
@@ -108,20 +114,19 @@ internal class Program
             int index = 0;
             foreach (string codeBlock in codeBlocks)
             {
-                string embeddedSolutionFileName
-                    = embeddedPartialSolutionFileNameTrimmed + $".{index++:000}" + ".cs";
+                string embeddedSolutionOutputFileName
+                    = inputContentFileNameTrimmed + $".{index++:000}" + ".cs";
 
-                string embeddedSolutionFilePath
-                    = Path.Combine(outputFolder, embeddedSolutionFileName);
+                string embeddedSolutionOutputFilePath
+                    = Path.Combine(outputFolder, embeddedSolutionOutputFileName);
 
 
-                Console.WriteLine(embeddedSolutionFilePath);
                 Console.WriteLine(new string('*', 80));
-                Console.WriteLine(embeddedSolutionFilePath);
+                Console.WriteLine(embeddedSolutionOutputFilePath);
                 Console.WriteLine(codeBlock);
                 Console.WriteLine(new string('*', 80));
 
-                BuildCsFiles.WriteAllText(embeddedSolutionFilePath, codeBlock);
+                BuildOutputFiles.WriteAllText(embeddedSolutionOutputFilePath, codeBlock);
 
                 SyntaxTree syntaxTree
                     = codeBlock.CompileSyntaxTree();

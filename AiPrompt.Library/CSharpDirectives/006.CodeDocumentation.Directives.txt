@@ -1,2 +1,0 @@
- - **Code Documentation**: 
- - Add comments to explain complex code structures or logic in a way accessible to business analysts or entry-level programmers.

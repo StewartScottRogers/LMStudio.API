@@ -1,6 +1,0 @@
-- **Programming Constructs**:
- - Utilize Fluent Interfaces wherever possible.
- - Implement LINQ where applicable.
- - Prefer 'foreach' statements instead of 'for' loops.
- - Use streams for all input/output operations.
- - Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records

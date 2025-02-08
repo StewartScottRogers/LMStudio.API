@@ -1,0 +1,1 @@
+﻿var stack = new Stack<int>(5);

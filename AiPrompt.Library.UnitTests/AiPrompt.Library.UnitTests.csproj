@@ -9,10 +9,6 @@
   <Import Project="..\AiPrompt.Library\AiPrompt.Library.projitems" Label="Shared" />
 
   <ItemGroup>
-    <ProjectReference Include="..\Compiler.CSharp\Compiler.CSharp.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Update="Microsoft.NET.Test.Sdk" Version="17.12.0" />
   </ItemGroup>
 

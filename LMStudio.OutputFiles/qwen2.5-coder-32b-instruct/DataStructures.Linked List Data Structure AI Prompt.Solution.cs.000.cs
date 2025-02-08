@@ -1,0 +1,1 @@
+﻿public readonly record struct Node<T>(T Data, Node<T>? Next);

@@ -9,25 +9,24 @@
     <Import_RootNamespace>AiPrompt.Library</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\006.CodeDocumentation.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\007.UnitTesting.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\004.ProgramingConstructs.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\003.LibraryUsage.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\002.CodingStyles.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\001.DotNetVersion.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\005.FileSystemStructure.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\008.SolutionSteps.Directives.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Heap Data Structure AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Linked List Data Structure AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Merge Sorted Lists AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Stack Data Structure AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Pascale Language Lexer AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Python Lexer AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Roslyn Ai Tokenizer AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Tiny Language Lexer AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Libraries\Solutions POSIX IO AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Microservices\HttpServer.BatchUploader AI Prompt.Project.txt" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Persistence\lComplete Library to provides X-base Functionality.Project.txt" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\006.CodeDocumentation.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\007.UnitTesting.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\004.ProgramingConstructs.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\003.LibraryUsage.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\002.CodingStyles.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\001.DotNetVersion.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\005.FileSystemStructure.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\008.SolutionSteps.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Linked List Data Structure AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Merge Sorted Lists AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Stack Data Structure AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Pascale Language Lexer AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Python Lexer AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Roslyn Ai Tokenizer AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Tiny Language Lexer AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Libraries\Solutions POSIX IO AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Microservices\HttpServer.BatchUploader AI Prompt.Project.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Persistence\Complete Library to provides X-BASE Functionality.Project.md" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedPrompts.cs" />

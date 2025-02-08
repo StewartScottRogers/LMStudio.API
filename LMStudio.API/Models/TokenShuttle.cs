@@ -51,7 +51,7 @@ namespace LMStudio.API.Models
                 yield return match.Trim();
         }
 
-        public string Content()
+        public string PromptOutputContent()
         {
             return StringBuilder.ToString();
         }

@@ -10,7 +10,7 @@ namespace AiPrompt.Library.ProjectPrompts
         public static string CreateDirectivesPrompt()
         {
             IEnumerable<string> embeddedPrompts
-                = EmbeddedPrompts.GetAllPaths("Directives.txt");
+                = EmbeddedPrompts.GetAllPaths("Directives.md");
 
             StringBuilder stringBuilder = new StringBuilder();
             foreach (string embeddedPrompt in embeddedPrompts)
@@ -26,7 +26,7 @@ namespace AiPrompt.Library.ProjectPrompts
         public static IEnumerable<(string ProjectPromptName, string ProjectPromptContent)> CreateProjectPrompt()
         {
             IEnumerable<string> embeddedPrompts
-                = EmbeddedPrompts.GetAllPaths("Project.txt");
+                = EmbeddedPrompts.GetAllPaths("Project.md");
 
             foreach (string embeddedPrompt in embeddedPrompts)
             {

@@ -20,6 +20,7 @@ internal class Program
         // "phi-4"
         // "qwen2.5-coder-32b-instruct"
         // "deepseek-r1-distill-llama-8b"
+        // "Llama 3.1 Tulu 3 8B"
 
         string aiModel = "Llama 3.1 Tulu 3 8B";
 

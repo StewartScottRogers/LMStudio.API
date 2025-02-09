@@ -8,4 +8,82 @@
   <PropertyGroup Label="Configuration">
     <Import_RootNamespace>LMStudio.OutputFiles</Import_RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)mistral-small-24b-instruct-2501\" />
+    <Folder Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\" />
+    <Folder Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\" />
+    <Folder Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Stack Data Structure AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Stack Data Structure AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Stack Data Structure AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Stack Data Structure AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Stack Data Structure AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Python Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Python Lexer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Python Lexer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Python Lexer AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Python Lexer AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.005.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.006.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.007.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.003.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Linked List Data Structure AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Linked List Data Structure AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Merge Sorted Lists AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Merge Sorted Lists AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Stack Data Structure AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\DataStructures.Stack Data Structure AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Pascale Language Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Pascale Language Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Python Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Python Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Tiny Language Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Lexers.Tiny Language Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Libraries.Solutions POSIX IO AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Libraries.Solutions POSIX IO AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.output.md" />
+  </ItemGroup>
 </Project>

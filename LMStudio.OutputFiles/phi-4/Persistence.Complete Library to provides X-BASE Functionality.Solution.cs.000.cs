@@ -1,0 +1,1 @@
+﻿public record XBaseRecord(string Field1, string Field2, int? Field3);

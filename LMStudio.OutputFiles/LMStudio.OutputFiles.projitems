@@ -11,7 +11,6 @@
   <ItemGroup>
     <Folder Include="$(MSBuildThisFileDirectory)mistral-small-24b-instruct-2501\" />
     <Folder Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\" />
-    <Folder Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.000.cs" />
@@ -103,6 +102,64 @@
     <Compile Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.001.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.002.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Stack Data Structure AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Stack Data Structure AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Stack Data Structure AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Stack Data Structure AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.005.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.006.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.007.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Python Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Python Lexer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Python Lexer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Python Lexer AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Python Lexer AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Python Lexer AI Prompt.Solution.cs.005.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.005.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.006.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.007.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.008.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.009.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.005.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.004.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.005.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.006.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.007.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.008.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\DataStructures.Linked List Data Structure AI Prompt.Solution.input.md" />
@@ -145,5 +202,25 @@
     <None Include="$(MSBuildThisFileDirectory)phi-4\Microservices.HttpServer.BatchUploader AI Prompt.Solution.output.md" />
     <None Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.input.md" />
     <None Include="$(MSBuildThisFileDirectory)phi-4\Persistence.Complete Library to provides X-BASE Functionality.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Linked List Data Structure AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Linked List Data Structure AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Merge Sorted Lists AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Merge Sorted Lists AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Stack Data Structure AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\DataStructures.Stack Data Structure AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Pascale Language Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Python Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Python Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Lexers.Tiny Language Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Libraries.Solutions POSIX IO AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Libraries.Solutions POSIX IO AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Microservices.HttpServer.BatchUploader AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Microservices.HttpServer.BatchUploader AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.output.md" />
   </ItemGroup>
 </Project>

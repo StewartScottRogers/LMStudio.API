@@ -1,0 +1,1 @@
+﻿public bool IsEmpty() => _topIndex < 0;

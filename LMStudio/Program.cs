@@ -22,7 +22,7 @@ internal class Program
         // "deepseek-r1-distill-llama-8b"
         // "Llama 3.1 Tulu 3 8B"
 
-        string aiModel = "qwen2.5-coder-32b-instruct";
+        string aiModel = "mistral-small-24b-instruct-2501";
 
         string[] projectFilePaths
             = EmbeddedPrompts.GetAllPaths(endsWith: ".Project.md")

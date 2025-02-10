@@ -9,9 +9,24 @@
     <Import_RootNamespace>LMStudio.OutputFiles</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Merge Sorted Lists AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Stack Data Structure AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Pascale Language Lexer AI Prompt.Solution.cs.003.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Python Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Tiny Language Lexer AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Libraries.Solutions POSIX IO AI Prompt.Solution.cs.002.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Microservices.HttpServer.BatchUploader AI Prompt.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.000.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.001.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.002.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.000.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.001.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\DataStructures.Linked List Data Structure AI Prompt.Solution.cs.002.cs" />
@@ -274,6 +289,26 @@
     <Compile Include="$(MSBuildThisFileDirectory)qwen2.5-coder-32b-instruct\Persistence.Complete Library to provides X-BASE Functionality.Solution.cs.008.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Linked List Data Structure AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Linked List Data Structure AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Merge Sorted Lists AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Merge Sorted Lists AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Stack Data Structure AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\DataStructures.Stack Data Structure AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Pascale Language Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Pascale Language Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Python Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Python Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Roslyn Ai Tokenizer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Tiny Language Lexer AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Lexers.Tiny Language Lexer AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Libraries.Solutions POSIX IO AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Libraries.Solutions POSIX IO AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Microservices.HttpServer.BatchUploader AI Prompt.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Microservices.HttpServer.BatchUploader AI Prompt.Solution.output.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Persistence.Complete Library to provides X-BASE Functionality.Solution.input.md" />
+    <None Include="$(MSBuildThisFileDirectory)deepseek-r1-distill-llama-8b\Persistence.Complete Library to provides X-BASE Functionality.Solution.output.md" />
     <None Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\DataStructures.Linked List Data Structure AI Prompt.Solution.input.md" />
     <None Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\DataStructures.Linked List Data Structure AI Prompt.Solution.output.md" />
     <None Include="$(MSBuildThisFileDirectory)Llama 3.1 Tulu 3 8B\DataStructures.Merge Sorted Lists AI Prompt.Solution.input.md" />

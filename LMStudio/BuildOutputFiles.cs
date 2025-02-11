@@ -7,7 +7,7 @@ namespace LMStudio
 {
     public static class BuildOutputFiles
     {
-        public static string SearchForDirectory(string directoryName, int levelsUp)
+        public static string SearchForDirectory(string directoryName= "LMStudio.OutputFiles", int levelsUp = 6)
         {
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
 

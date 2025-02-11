@@ -15,15 +15,11 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string aiModel = "qwen2.5-coder-32b-instruct";
+        string aiModel = "Codestral 22B v0.1";
 
-        string[] projectFilePaths = EmbeddedPrompts.GetAllPaths(endsWith: ".Project.md").ToArray();
+        string[] projectFilePaths = EmbeddedPrompts.GetAllProjectFilePaths().ToArray();
 
-        string outputFolder = BuildOutputFiles.SearchForDirectory("LMStudio.OutputFiles", 6);
-
-        outputFolder = Path.Combine(outputFolder, aiModel);
-        if (!Directory.Exists(outputFolder))
-            Directory.CreateDirectory(outputFolder);
+        string outputFolder = BuildOutputFiles.SearchForDirectory();
 
         foreach (string projectFilePath in projectFilePaths)
             BuildProjectFiles(projectFilePath, outputFolder, aiModel);
@@ -31,6 +27,10 @@ internal class Program
 
     private static void BuildProjectFiles(string projectFilePath, string outputFolder, string aiModel)
     {
+        outputFolder = Path.Combine(outputFolder, aiModel);
+        if (!Directory.Exists(outputFolder))
+            Directory.CreateDirectory(outputFolder);
+
         Console.WriteLine(new string('=', 80));
         Console.WriteLine(projectFilePath);
 

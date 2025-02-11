@@ -7,7 +7,7 @@ namespace AiPrompts
 {
     public static class EmbeddedPrompts 
     {
-        public static IEnumerable<string> GetAllPaths(string endsWith)
+        public static IEnumerable<string> GetAllProjectFilePaths(string endsWith= ".Project.md")
         {
             string[] embeddedResources
                 = Assembly

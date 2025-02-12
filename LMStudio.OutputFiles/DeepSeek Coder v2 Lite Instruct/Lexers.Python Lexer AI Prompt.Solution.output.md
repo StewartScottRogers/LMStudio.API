@@ -1,0 +1,1 @@
+﻿[ 'LM Studios Context Window is probably to small. Increase The Context Window Size!' MESSAGE EXCEPTION: The requested operation requires an element of type 'Object', but the target element has type 'String'.]

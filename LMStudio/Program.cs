@@ -2,20 +2,17 @@
 using LMStudio;
 using System.Linq;
 
-
 internal class Program
 {
     private static void Main(string[] args)
     {
-        string aiModel = "Codestral 22B v0.1";
+        string aiModel = "DeepSeek Coder v2 Lite Instruct";
 
         string[] projectFilePaths = EmbeddedPrompts.GetAllProjectFilePaths().ToArray();
 
-        string outputFolder = BuildOutputFiles.SearchForDirectory();
+        string outputFolder = ProjectFileManager.GetOutputFolder();
 
         foreach (string projectFilePath in projectFilePaths)
-            Xxxx.BuildProjectFiles(projectFilePath, outputFolder, aiModel);
+            ProjectFileManager.BuildProjectFiles(projectFilePath, outputFolder, aiModel);
     }
-
-
 }

@@ -23,6 +23,8 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.OutputFiles", "LMS
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.OutputFolders", "LMStudio.OutputFolders\LMStudio.OutputFolders.shproj", "{C4A615D5-7AD7-4425-A461-7AD0BA28E176}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,7 @@ Global
 		AiPrompt.Library\AiPrompt.Library.projitems*{6ff25ac3-ff93-4b12-aa7c-2590b84a94cd}*SharedItemsImports = 5
 		AiPrompt.Library\AiPrompt.Library.projitems*{8f4867ac-ea04-402f-90ec-4d40b84c0d3f}*SharedItemsImports = 5
 		LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.projitems*{960bce4b-1536-4a67-8a98-7d4bc2b7d952}*SharedItemsImports = 13
+		LMStudio.OutputFolders\LMStudio.OutputFolders.projitems*{c4a615d5-7ad7-4425-a461-7ad0ba28e176}*SharedItemsImports = 13
 		LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.projitems*{f879cb6d-3704-4c4e-9ab0-49ef7a94d439}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

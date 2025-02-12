@@ -6,7 +6,15 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        string aiModel = "DeepSeek Coder v2 Lite Instruct";
+        string[] aiModels
+            = {
+                 "DeepSeek Coder v2 Lite Instruct"      //  0
+                ,"Qwen2.5 Coder 32B Instruct"           //  1
+                ,"Mistral Small 24B Instruct 2501"      //  2
+
+            };
+
+        string aiModel = aiModels[2];
 
         string[] projectFilePaths = EmbeddedPrompts.GetAllProjectFilePaths().ToArray();
 

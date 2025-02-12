@@ -15,7 +15,7 @@ namespace LMStudio
 {
     public static class ProjectFileManager
     {
-        public static string GetOutputFolder(string directoryName = "LMStudio.OutputFiles", int levelsUp = 6)
+        public static string GetOutputFolder(string directoryName = "LMStudio.OutputFolders", int levelsUp = 6)
         {
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -42,23 +42,27 @@ namespace LMStudio
             Console.WriteLine(new string('=', 80));
             Console.WriteLine(projectFilePath);
 
-            string embeddedPartialSolutionOutputFileName
+            string aiModelFolder
                 = Path
                     .GetFileNameWithoutExtension(
                         Path.GetFileNameWithoutExtension(projectFilePath)
-                    ) + ".Solution.cs";
+                    ).Remove(0, "LMStudio.Prompts.".Length);
+
+            outputFolder = Path.Combine(outputFolder, aiModelFolder);
+            if (!Directory.Exists(outputFolder))
+                Directory.CreateDirectory(outputFolder);
+
+            string embeddedPartialSolutionOutputFileName
+                = "Solution.cs";
 
             Console.WriteLine(embeddedPartialSolutionOutputFileName);
             Console.WriteLine(new string('=', 80));
 
-            string inputContentFileNameTrimmed
-                = embeddedPartialSolutionOutputFileName.Remove(0, "LMStudio.Prompts.".Count());
 
             string inputContent
                 = EmbeddedPrompts.GetPrompt(projectFilePath);
 
-            string inputContentFileName
-                = Path.GetFileNameWithoutExtension(inputContentFileNameTrimmed) + ".input.md";
+            string inputContentFileName = "input.md";
 
             string inputContentFilePath
                 = Path.Combine(outputFolder, inputContentFileName);
@@ -83,8 +87,7 @@ namespace LMStudio
             string promptOutputContent = tokenShuttle.PromptOutputContent();
             Console.WriteLine(promptOutputContent);
 
-            string embeddedOutputFileName
-                = Path.GetFileNameWithoutExtension(inputContentFileNameTrimmed) + ".output.md";
+            string embeddedOutputFileName = "output.md";
 
             string embeddedOutputFilePath
                 = Path.Combine(outputFolder, embeddedOutputFileName);
@@ -101,14 +104,13 @@ namespace LMStudio
 
             BuildCodeBlocks(
                 outputFolder: outputFolder,
-                outputFileName: inputContentFileNameTrimmed,
                 codeBlocks: codeBlocks
             );
 
             Console.WriteLine(new string('-', 80));
         }
 
-        private static void BuildCodeBlocks(string outputFolder, string outputFileName, string[] codeBlocks)
+        private static void BuildCodeBlocks(string outputFolder, string[] codeBlocks)
         {
             int index = 0;
             foreach (string codeBlock in codeBlocks)
@@ -118,7 +120,7 @@ namespace LMStudio
                 );
 
                 SaveCodeBlockToFile(
-                    codeBlockOutputFilePath: Path.Combine(outputFolder, outputFileName + $".{index++:000}" + ".cs"),
+                    codeBlockOutputFilePath: Path.Combine(outputFolder, $"CodeBlock.{index++:000}" + ".cs"),
                     codeBlock: codeBlock
                 );
             }

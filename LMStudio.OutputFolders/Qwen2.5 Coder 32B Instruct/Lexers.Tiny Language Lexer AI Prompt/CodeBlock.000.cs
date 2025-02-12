@@ -1,0 +1,20 @@
+﻿public enum TokenKind
+{
+    Identifier,
+    NumberLiteral,
+    Plus,
+    Minus,
+    Star,
+    Slash,
+    Assign,
+    If,
+    Then,
+    While,
+    Do,
+    Print,
+    End,
+    Semicolon,
+    LeftParenthesis,
+    RightParenthesis,
+    Eof
+}

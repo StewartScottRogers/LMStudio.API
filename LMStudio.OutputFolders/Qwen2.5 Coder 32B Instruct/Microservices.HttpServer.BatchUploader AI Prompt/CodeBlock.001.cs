@@ -1,0 +1,1 @@
+﻿public record UploadResponse(string FileName, bool Success, string ErrorMessage);

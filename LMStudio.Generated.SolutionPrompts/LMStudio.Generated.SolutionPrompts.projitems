@@ -15,12 +15,7 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\DataStructures.Linked List Data Structure AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\DataStructures.Merge Sorted Lists AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\DataStructures.Stack Data Structure AI Prompt.Project.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\Lexers.Pascale Language Lexer AI Prompt.Project.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\Lexers.Python Lexer AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\Lexers.Roslyn Ai Tokenizer AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\Lexers.Tiny Language Lexer AI Prompt.Project.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\Libraries.Solutions POSIX IO AI Prompt.Project.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\Microservices.HttpServer.BatchUploader AI Prompt.Project.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\Persistence.Complete Library to provides X-BASE Functionality.Project.md" />
   </ItemGroup>
 </Project>

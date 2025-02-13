@@ -1,11 +1,12 @@
 ﻿# Lexers: Roslyn Ai Tokenizer AI Prompt
 ------------------------------------------------------------------------------------------------------------------------
-- **.NET Versioning**: 
+- **.NET Version Requirements**: 
   - Create a complete .NET 9.0 Solution
   - All solution coding will be C#. 
   - Solution must be usable in Visual Studio 2022
   - Ensure the solution is fully compilable and executable without additional coding.
-
+  - Do not use ImplicitUsings.
+  - Do not use Nullable.
 
 - **Coding Style**:
 	- Never use leading underscores for any variable.
@@ -17,6 +18,7 @@
 	- Interface names should use UpperCamelCase.
 	- Enumeration names should use UpperCamelCase.
 	- Record names should use UpperCamelCase.
+	- Struct names should use UpperCamelCase.
 	- Method names should use UpperCamelCase.
 	- All Tuples should be named from the returning method.
 	- All Tuples must be Post Fixed with the word 'Tuple'.
@@ -28,22 +30,17 @@
 	- Methods should be named with complete nouns, appending a prefix or postfix for clarification if required.
 	- Classes should be named with complete nouns, appending a prefix or postfix for clarification if required.
 	- Interfaces should be named with complete nouns, appending a prefix or postfix for clarification if required.
-
-
+	- Structs should be named with complete nouns, appending a prefix or postfix for clarification if required.
 
 - **Library Usage**:
 	- Use only the Microsoft Basic Component Library.
 	- Use defined value types from the Basic Component Library.
 	- Use defined reference types from the Basic Component Library.
-	- Use var types for Tuples.
-	- Favor Records over Classes.
 
 - **Programming Constructs**:
-	- Utilize Fluent Interfaces wherever possible.
-	- Implement LINQ where applicable.
-	- Prefer 'foreach' statements instead of 'for' loops.
-	- Use streams for all input/output operations.
 	- Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records
+	- Use var types for Tuples.
+	- Favor Records over Classes.
 
 - **File System Structure**: 
 	- Create separate files for each class.
@@ -57,18 +54,7 @@
 - **Unit Testing**: 
 	- Use only the Microsoft Unit Test Framework.
 	- Do not use XUnit or NUnit.
-	- Include many Unit tests for every entry point in Tested code.
 	- Unit Test all bounding conditions
-	- Write three times as many Unit tests as you thought you should.
-
-- **Solution Steps**
-	- Initialize a new Solution in Visual Studio.
-	- Include comprehensive comments for any non-trivial logic or structure to enhance understanding.
-	- Define the project structure ensuring each class, interface, enumeration, and record is in its own file.
-	- Develop unit tests using Microsoft's Unit Test Framework.
-	- include a .README or documentation summarizing the project and key points of logic for easy comprehension.
-	- Rethink the solution steps multiple times to make sure it is as correct as possible
-	- Think Harder.
 
 
 ------------------------------------------------------------------------------------------------------------------------

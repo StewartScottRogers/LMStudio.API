@@ -1,4 +1,0 @@
-
-# Application Description
-
-    - Create a Web Server using a minimal API that accepts post as though it was an FTP server and save it to an Azure Blob with a date time stamp that will be unique.

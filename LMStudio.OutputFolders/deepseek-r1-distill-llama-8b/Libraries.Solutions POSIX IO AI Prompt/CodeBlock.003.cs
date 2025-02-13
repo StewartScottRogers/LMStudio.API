@@ -1,0 +1,1 @@
+﻿public static void CloseFile(FileDescriptor file)

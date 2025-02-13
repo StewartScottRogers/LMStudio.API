@@ -1,0 +1,1 @@
+﻿public static LseekResult Lseek(FileDescriptor file, long offset, SeekOrigin origin)

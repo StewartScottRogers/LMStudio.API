@@ -9,13 +9,13 @@
     <Import_RootNamespace>AiPrompt.Library</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\006.CodeDocumentation.Directives.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\007.UnitTesting.Directives.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\004.ProgramingConstructs.Directives.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\003.LibraryUsage.Directives.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\002.CodingStyles.Directives.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\001.DotNetVersion.Directives.md" />
-    <EmbeddedResource Include="$(MSBuildThisFileDirectory)CSharpDirectives\005.FileSystemStructure.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DirectivePrompts\006.CodeDocumentation.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DirectivePrompts\007.UnitTesting.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DirectivePrompts\004.ProgramingConstructs.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DirectivePrompts\003.LibraryUsage.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DirectivePrompts\002.CodingStyles.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DirectivePrompts\001.DotNetVersion.Directives.md" />
+    <EmbeddedResource Include="$(MSBuildThisFileDirectory)DirectivePrompts\005.FileSystemStructure.Directives.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Linked List Data Structure AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Merge Sorted Lists AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\DataStructures\Stack Data Structure AI Prompt.Project.md" />
@@ -24,6 +24,5 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)EmbeddedPrompts.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)PromptCompositionBuilder.cs" />
   </ItemGroup>
 </Project>

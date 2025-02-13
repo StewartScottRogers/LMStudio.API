@@ -9,9 +9,6 @@
     <Import_RootNamespace>LMStudio.Generated.SolutionPrompts</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)EmbeddedPrompts.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\DataStructures.Linked List Data Structure AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\DataStructures.Merge Sorted Lists AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)Prompts\DataStructures.Stack Data Structure AI Prompt.Project.md" />

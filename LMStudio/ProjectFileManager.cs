@@ -15,7 +15,7 @@ namespace LMStudio
 {
     public static class ProjectFileManager
     {
-        public static string GetOutputFolder(string directoryName = "LMStudio.OutputFolders", int levelsUp = 6)
+        public static string GetProjectOutputFolder(string directoryName, int levelsUp = 6)
         {
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -33,48 +33,45 @@ namespace LMStudio
             return string.Empty;
         }
 
-        public static void BuildProjectFiles(string projectFilePath, string outputFolder, string aiModel)
+        public static void BuildProjectFiles(string directivesPromptContent, string projectPromptFilePath, string outputFolder, string aiModelFolder)
         {
-            outputFolder = Path.Combine(outputFolder, aiModel);
-            if (!Directory.Exists(outputFolder))
-                Directory.CreateDirectory(outputFolder);
-
             Console.WriteLine(new string('=', 80));
-            Console.WriteLine(projectFilePath);
-
-            string aiModelFolder
-                = Path
-                    .GetFileNameWithoutExtension(
-                        Path.GetFileNameWithoutExtension(projectFilePath)
-                    ).Remove(0, "LMStudio.Prompts.".Length);
+            Console.WriteLine(projectPromptFilePath);
 
             outputFolder = Path.Combine(outputFolder, aiModelFolder);
             if (!Directory.Exists(outputFolder))
                 Directory.CreateDirectory(outputFolder);
 
-            string embeddedPartialSolutionOutputFileName
-                = "Solution.cs";
+            string cropedAiModelFolder
+                = Path
+                    .GetFileNameWithoutExtension(
+                        Path.GetFileNameWithoutExtension(projectPromptFilePath)
+                    ).Remove(0, "LMStudio.ProjectPrompts.".Length);
 
-            Console.WriteLine(embeddedPartialSolutionOutputFileName);
+            outputFolder = Path.Combine(outputFolder, cropedAiModelFolder);
+            if (!Directory.Exists(outputFolder))
+                Directory.CreateDirectory(outputFolder);
+
             Console.WriteLine(new string('=', 80));
 
+            string projectPromptContent = EmbeddedPrompts.GetPrompt(projectPromptFilePath);
+            string inputPromptContent
+                = directivesPromptContent
+                + Environment.NewLine
+                + projectPromptContent;
 
-            string inputContent
-                = EmbeddedPrompts.GetPrompt(projectFilePath);
 
-            string inputContentFileName = "input.md";
+            string inputPromptContentFilePath
+                = Path.Combine(outputFolder, "input.md");
 
-            string inputContentFilePath
-                = Path.Combine(outputFolder, inputContentFileName);
-
-            WriteAllText(inputContentFilePath, inputContent);
+            WriteAllText(inputPromptContentFilePath, inputPromptContent);
 
             TokenShuttle tokenShuttle
                 = LMStudioConnection
                     .FetchAiReplies(
                         endpoint: "http://192.168.1.7:1232",
-                        aiModel: aiModel,
-                        prompt: inputContent
+                        aiModel: aiModelFolder,
+                        prompt: inputPromptContent
                     );
 
             using (TokenConsole tokenConsole = new TokenConsole(Console.BackgroundColor))

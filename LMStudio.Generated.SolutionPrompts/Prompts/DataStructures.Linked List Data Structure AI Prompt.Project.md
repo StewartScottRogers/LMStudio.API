@@ -1,11 +1,11 @@
 ﻿# DataStructures: Linked List Data Structure AI Prompt
 ------------------------------------------------------------------------------------------------------------------------
 - **.NET Version Requirements**: 
-  - Create a complete .NET 9.0 Solution
+  - Create a complete .NET 9.0 Solution.
   - All solution coding will be C#. 
-  - Solution must be usable in Visual Studio 2022
+  - Solution must be usable in Visual Studio 2022.
   - Ensure the solution is fully compilable and executable without additional coding.
-  - Do not use ImplicitUsings.
+  - Do not use Implicit Usings.
   - Do not use Nullable.
 
 - **Coding Style**:
@@ -38,7 +38,7 @@
 	- Use defined reference types from the Basic Component Library.
 
 - **Programming Constructs**:
-	- Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records
+	- Favor use of Tuples for returning multiple values from a method rather than Classes or Structs, or Records
 	- Use var types for Tuples.
 	- Favor Records over Classes.
 
@@ -54,7 +54,7 @@
 - **Unit Testing**: 
 	- Use only the Microsoft Unit Test Framework.
 	- Do not use XUnit or NUnit.
-	- Unit Test all bounding conditions
+	- Unit Test all bounding conditions.
 
 
 ------------------------------------------------------------------------------------------------------------------------
@@ -62,7 +62,7 @@
 # Application Description
 
 	- Create a Linked list Data Structure
-	- Dynamic memory allocation.**
-	- Search for a specific element in a linked list.**
-	- Insert an element at the beginning of the linked list.**
-    - Delete an element from the linked list.**
+	- Dynamic memory allocation.
+	- Search for a specific element in a linked list.
+	- Insert an element at the beginning of the linked list.
+    - Delete an element from the linked list.

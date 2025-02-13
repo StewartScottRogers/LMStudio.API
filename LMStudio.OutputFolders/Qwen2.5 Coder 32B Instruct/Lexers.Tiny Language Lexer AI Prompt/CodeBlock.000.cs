@@ -1,0 +1,20 @@
+﻿public enum TokenKind
+{
+    EndOfFile,
+    Identifier,
+    Number,
+    ColonEquals,
+    Plus,
+    Minus,
+    Asterisk,
+    Slash,
+    LeftParen,
+    RightParen,
+    IfKeyword,
+    ThenKeyword,
+    WhileKeyword,
+    DoKeyword,
+    EndKeyword,
+    PrintKeyword,
+    Semicolon
+}

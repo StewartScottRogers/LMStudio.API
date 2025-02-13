@@ -3,25 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.API", "LMStudio.API\LMStudio.API.csproj", "{6704BBE0-43E9-4209-9B2E-BBEC117C1940}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio", "LMStudio\LMStudio.csproj", "{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.CSharp", "Compiler.CSharp\Compiler.CSharp.csproj", "{C10F1BF6-073A-4EDF-B63C-E16A201FF075}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.CSharp.UnitTests", "Compiler.CSharp.UnitTests\Compiler.CSharp.UnitTests.csproj", "{1947318B-3E5D-4C3E-901E-EFC08B1B6589}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AiPrompt.Library", "AiPrompt.Library\AiPrompt.Library.shproj", "{5F1E3573-D407-449F-ACFC-A114D949B959}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompt.Library.UnitTests", "AiPrompt.Library.UnitTests\AiPrompt.Library.UnitTests.csproj", "{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.Generated.SolutionPrompts", "LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.shproj", "{960BCE4B-1536-4A67-8A98-7D4BC2B7D952}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.Generated.SolutionPrompts.Builder", "LMStudio.Generated.SolutionPrompts.Builder\LMStudio.Generated.SolutionPrompts.Builder.csproj", "{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.OutputFolders", "LMStudio.OutputFolders\LMStudio.OutputFolders.shproj", "{C4A615D5-7AD7-4425-A461-7AD0BA28E176}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.CSharp", "Libraries\Compiler.CSharp\Compiler.CSharp.csproj", "{A21EC0CC-1091-9D2B-7AC2-422A3C797DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.API", "Libraries\LMStudio.API\LMStudio.API.csproj", "{82F02226-A70A-3FB0-860C-354DD2A3578B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,45 +23,33 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6704BBE0-43E9-4209-9B2E-BBEC117C1940}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6704BBE0-43E9-4209-9B2E-BBEC117C1940}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6704BBE0-43E9-4209-9B2E-BBEC117C1940}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6704BBE0-43E9-4209-9B2E-BBEC117C1940}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F879CB6D-3704-4C4E-9AB0-49EF7A94D439}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C10F1BF6-073A-4EDF-B63C-E16A201FF075}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C10F1BF6-073A-4EDF-B63C-E16A201FF075}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C10F1BF6-073A-4EDF-B63C-E16A201FF075}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C10F1BF6-073A-4EDF-B63C-E16A201FF075}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1947318B-3E5D-4C3E-901E-EFC08B1B6589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1947318B-3E5D-4C3E-901E-EFC08B1B6589}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1947318B-3E5D-4C3E-901E-EFC08B1B6589}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1947318B-3E5D-4C3E-901E-EFC08B1B6589}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8F4867AC-EA04-402F-90EC-4D40B84C0D3F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A21EC0CC-1091-9D2B-7AC2-422A3C797DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A21EC0CC-1091-9D2B-7AC2-422A3C797DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A21EC0CC-1091-9D2B-7AC2-422A3C797DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A21EC0CC-1091-9D2B-7AC2-422A3C797DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82F02226-A70A-3FB0-860C-354DD2A3578B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82F02226-A70A-3FB0-860C-354DD2A3578B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82F02226-A70A-3FB0-860C-354DD2A3578B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82F02226-A70A-3FB0-860C-354DD2A3578B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{6704BBE0-43E9-4209-9B2E-BBEC117C1940} = {CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}
-		{C10F1BF6-073A-4EDF-B63C-E16A201FF075} = {CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}
-		{1947318B-3E5D-4C3E-901E-EFC08B1B6589} = {CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}
+		{A21EC0CC-1091-9D2B-7AC2-422A3C797DAE} = {CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}
+		{82F02226-A70A-3FB0-860C-354DD2A3578B} = {CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5C79D6B3-4B27-4F11-A1E1-DE8E62F9B74F}
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AiPrompt.Library\AiPrompt.Library.projitems*{5f1e3573-d407-449f-acfc-a114d949b959}*SharedItemsImports = 13
-		AiPrompt.Library\AiPrompt.Library.projitems*{6ff25ac3-ff93-4b12-aa7c-2590b84a94cd}*SharedItemsImports = 5
-		AiPrompt.Library\AiPrompt.Library.projitems*{8f4867ac-ea04-402f-90ec-4d40b84c0d3f}*SharedItemsImports = 5
 		LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.projitems*{960bce4b-1536-4a67-8a98-7d4bc2b7d952}*SharedItemsImports = 13
 		LMStudio.OutputFolders\LMStudio.OutputFolders.projitems*{c4a615d5-7ad7-4425-a461-7ad0ba28e176}*SharedItemsImports = 13
-		LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.projitems*{f879cb6d-3704-4c4e-9ab0-49ef7a94d439}*SharedItemsImports = 5
+		AiPrompt.Library\AiPrompt.Library.projitems*{f879cb6d-3704-4c4e-9ab0-49ef7a94d439}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

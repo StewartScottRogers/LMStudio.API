@@ -1,11 +1,11 @@
-﻿# DataStructures: Stack Data Structure AI Prompt
+﻿# iny Language Lexer AI Prompt
 ------------------------------------------------------------------------------------------------------------------------
 - **.NET Version Requirements**: 
-  - Create a complete .NET 9.0 Solution.
+  - Create a complete .NET 9.0 Solution
   - All solution coding will be C#. 
-  - Solution must be usable in Visual Studio 2022.
+  - Solution must be usable in Visual Studio 2022
   - Ensure the solution is fully compilable and executable without additional coding.
-  - Do not use Implicit Usings.
+  - Do not use ImplicitUsings.
   - Do not use Nullable.
 
 - **Coding Style**:
@@ -38,7 +38,7 @@
 	- Use defined reference types from the Basic Component Library.
 
 - **Programming Constructs**:
-	- Favor use of Tuples for returning multiple values from a method rather than Classes or Structs, or Records
+	- Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records
 	- Use var types for Tuples.
 	- Favor Records over Classes.
 
@@ -54,17 +54,35 @@
 - **Unit Testing**: 
 	- Use only the Microsoft Unit Test Framework.
 	- Do not use XUnit or NUnit.
-	- Unit Test all bounding conditions.
+	- Unit Test all bounding conditions
 
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Application Description	
+# Application Description
 
-	- Create a C# library that implements a stack data structure with push and pop operations.
-	- Push: Add an element to the top of a stack.
-	- Pop: Remove an element from the top of a stack.
-	- IsEmpty: Check if the stack is empty.
-	- IsFull: Check if the stack is full.
-	- Peek: Get the value of the top element without removing it.
+Create a Class Library to Lexer the Grammar listed below.
 
+Generate a Lexer for the Abstract Syntax Tree.
+Generate a Abstract Syntax Tree Pretty Printer.
+Generate all nodes in the Abstract Syntaxes Tree.
+Generate 25 Unit Tests for lexing the Abstract Syntax Tree.
+
+
+Grammar:
+```
+	<program> ::= <stmt_list>
+	<stmt_list> ::= <stmt> | <stmt> ";" <stmt_list>
+	<stmt> ::= <assign_stmt> | <if_stmt> | <while_stmt> | <print_stmt>
+	<assign_stmt> ::= <id> ":=" <expr>
+	<if_stmt> ::= "if" <expr> "then" <stmt_list> "end"
+	<while_stmt> ::= "while" <expr> "do" <stmt_list> "end"
+	<print_stmt> ::= "print" <expr>
+	<expr> ::= <term> | <term> "+" <expr> | <term> "-" <expr>
+	<term> ::= <factor> | <factor> "*" <term> | <factor> "/" <term>
+	<factor> ::= <id> | <number> | "(" <expr> ")"
+	<id> ::= <letter> { <letter> | <digit> }
+	<number> ::= <digit> { <digit> }
+	<letter> ::= "a" | "b" | "c" | ... | "z" | "A" | "B" | "C" | ... | "Z"
+	<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+```

@@ -1,11 +1,11 @@
-﻿# DataStructures: Stack Data Structure AI Prompt
+﻿# ctures: Merge Sorted Lists AI Prompt
 ------------------------------------------------------------------------------------------------------------------------
 - **.NET Version Requirements**: 
-  - Create a complete .NET 9.0 Solution.
+  - Create a complete .NET 9.0 Solution
   - All solution coding will be C#. 
-  - Solution must be usable in Visual Studio 2022.
+  - Solution must be usable in Visual Studio 2022
   - Ensure the solution is fully compilable and executable without additional coding.
-  - Do not use Implicit Usings.
+  - Do not use ImplicitUsings.
   - Do not use Nullable.
 
 - **Coding Style**:
@@ -38,7 +38,7 @@
 	- Use defined reference types from the Basic Component Library.
 
 - **Programming Constructs**:
-	- Favor use of Tuples for returning multiple values from a method rather than Classes or Structs, or Records
+	- Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records
 	- Use var types for Tuples.
 	- Favor Records over Classes.
 
@@ -54,17 +54,19 @@
 - **Unit Testing**: 
 	- Use only the Microsoft Unit Test Framework.
 	- Do not use XUnit or NUnit.
-	- Unit Test all bounding conditions.
+	- Unit Test all bounding conditions
 
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Application Description	
+# Application Description
 
-	- Create a C# library that implements a stack data structure with push and pop operations.
-	- Push: Add an element to the top of a stack.
-	- Pop: Remove an element from the top of a stack.
-	- IsEmpty: Check if the stack is empty.
-	- IsFull: Check if the stack is full.
-	- Peek: Get the value of the top element without removing it.
-
+	- Create an in-memory library that Merges sorted lists of integers. 
+	- The library should provide a method that takes N sorted lists of generics and returns a single sorted list of integers that contains all elements from the input lists. The output list should not contain any duplicates.
+	- The library should be able to handle large lists efficiently.
+	- The library should be able to handle a large number of input lists.
+	- The library should be able to handle a large number of elements in the input lists.
+	- The library should be able to handle null or empty input lists.
+	- The library should be made available as a fluent interface to allow for easy chaining of operations.
+	- The library should be well-documented with comments explaining the logic and structure of the code.
+	- The library should be comparable with LINQ and other standard C# libraries.

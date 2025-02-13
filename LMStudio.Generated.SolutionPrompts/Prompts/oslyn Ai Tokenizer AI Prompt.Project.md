@@ -1,11 +1,11 @@
-﻿# DataStructures: Stack Data Structure AI Prompt
+﻿# oslyn Ai Tokenizer AI Prompt
 ------------------------------------------------------------------------------------------------------------------------
 - **.NET Version Requirements**: 
-  - Create a complete .NET 9.0 Solution.
+  - Create a complete .NET 9.0 Solution
   - All solution coding will be C#. 
-  - Solution must be usable in Visual Studio 2022.
+  - Solution must be usable in Visual Studio 2022
   - Ensure the solution is fully compilable and executable without additional coding.
-  - Do not use Implicit Usings.
+  - Do not use ImplicitUsings.
   - Do not use Nullable.
 
 - **Coding Style**:
@@ -38,7 +38,7 @@
 	- Use defined reference types from the Basic Component Library.
 
 - **Programming Constructs**:
-	- Favor use of Tuples for returning multiple values from a method rather than Classes or Structs, or Records
+	- Favor use of Tuples for returning multiple values from a method rather than Data Transport Objects, Structs, Or Records
 	- Use var types for Tuples.
 	- Favor Records over Classes.
 
@@ -54,17 +54,18 @@
 - **Unit Testing**: 
 	- Use only the Microsoft Unit Test Framework.
 	- Do not use XUnit or NUnit.
-	- Unit Test all bounding conditions.
+	- Unit Test all bounding conditions
 
 
 ------------------------------------------------------------------------------------------------------------------------
 
-# Application Description	
+# Application Description
 
-	- Create a C# library that implements a stack data structure with push and pop operations.
-	- Push: Add an element to the top of a stack.
-	- Pop: Remove an element from the top of a stack.
-	- IsEmpty: Check if the stack is empty.
-	- IsFull: Check if the stack is full.
-	- Peek: Get the value of the top element without removing it.
+Use the C# Roslyn Compiler to create an Abstract Syntax Tree that includes all meta-data.
+Generate a Abstract Syntax Tree Pretty Printer.
+Generate an AST to code Reflow Generator in order to build and execute the generated code using Roslyn
+Generate 25 Unit Tests for lexing the Abstract Syntax Tree.
+
+Use the Abstract Syntax Tree Pretty Printer in the Unit Tests to display the Abstract Syntax Tree.
+Use the Abstract Syntax Tree Reflow Generator in the Unit Tests to execute the generated code.
 

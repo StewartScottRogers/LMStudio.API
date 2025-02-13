@@ -1,6 +1,4 @@
-﻿# DataStructures: Stack Data Structure AI Prompt
-------------------------------------------------------------------------------------------------------------------------
-- **.NET Version Requirements**: 
+﻿- **.NET Version Requirements**: 
   - Create a complete .NET 9.0 Solution.
   - All solution coding will be C#. 
   - Solution must be usable in Visual Studio 2022.
@@ -57,7 +55,6 @@
 	- Unit Test all bounding conditions.
 
 
-------------------------------------------------------------------------------------------------------------------------
 
 # Application Description	
 
@@ -67,4 +64,3 @@
 	- IsEmpty: Check if the stack is empty.
 	- IsFull: Check if the stack is full.
 	- Peek: Get the value of the top element without removing it.
-

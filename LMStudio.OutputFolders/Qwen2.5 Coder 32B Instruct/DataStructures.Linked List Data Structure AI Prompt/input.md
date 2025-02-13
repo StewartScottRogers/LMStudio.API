@@ -1,6 +1,4 @@
-﻿# DataStructures: Stack Data Structure AI Prompt
-------------------------------------------------------------------------------------------------------------------------
-- **.NET Version Requirements**: 
+﻿- **.NET Version Requirements**: 
   - Create a complete .NET 9.0 Solution.
   - All solution coding will be C#. 
   - Solution must be usable in Visual Studio 2022.
@@ -57,14 +55,11 @@
 	- Unit Test all bounding conditions.
 
 
-------------------------------------------------------------------------------------------------------------------------
 
-# Application Description	
+# Application Description
 
-	- Create a C# library that implements a stack data structure with push and pop operations.
-	- Push: Add an element to the top of a stack.
-	- Pop: Remove an element from the top of a stack.
-	- IsEmpty: Check if the stack is empty.
-	- IsFull: Check if the stack is full.
-	- Peek: Get the value of the top element without removing it.
-
+	- Create a Linked list Data Structure
+	- Dynamic memory allocation.
+	- Search for a specific element in a linked list.
+	- Insert an element at the beginning of the linked list.
+    - Delete an element from the linked list.

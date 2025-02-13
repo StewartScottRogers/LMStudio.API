@@ -1,12 +1,12 @@
 
 # Application Description
 
-Create a Class Library to Lexer the Grammar listed below.
+	- Create a Class Library to Lexer the Grammar listed below.
 
-Generate a Lexer for the Abstract Syntax Tree.
-Generate a Abstract Syntax Tree Pretty Printer.
-Generate all nodes in the Abstract Syntaxes Tree.
-Generate 25 Unit Tests for lexing the Abstract Syntax Tree.
+	- Generate a Lexer for the Abstract Syntax Tree.
+	- Generate a Abstract Syntax Tree Pretty Printer.
+	- Generate all nodes in the Abstract Syntaxes Tree.
+	- Generate 25 Unit Tests for lexing the Abstract Syntax Tree.
 
 
 Grammar:

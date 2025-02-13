@@ -1,7 +1,0 @@
-﻿This is an extensive project that involves developing a complete library in C# to provide X-BASE functionality. The library should be usable in Visual Studio 2022 and should follow specific coding style guidelines, including using explicit types, camel case naming conventions, and Fluent Interfaces. The library should also utilize LINQ where applicable and use streams for all input/output operations.
-
-The library should provide mechanisms to read and write X-Base records to and from the file system, query X-Base records using SQL-like queries, update, delete, create new X-Base records and tables, as well as create indexes, relationships, views, triggers, stored procedures, functions, user-defined data types, aggregates, table types, table-valued functions, scalar functions, aggregate functions, stored procedures, triggers, views, indexes, relationships, constraints, defaults, and rules on X-Base tables.
-
-The solution should be structured into separate files for each class, interface, enumeration, and record. Comprehensive comments should be included to explain complex code structures or logic. Unit tests using Microsoft's Unit Test Framework should be developed for all entry points in the tested code, including testing bounding conditions.
-
-Overall, this project involves developing a comprehensive library that provides extensive functionality for X-BASE databases. The solution steps should include initializing a new Solution in Visual Studio, defining the project structure, developing unit tests, and creating documentation summarizing the project.

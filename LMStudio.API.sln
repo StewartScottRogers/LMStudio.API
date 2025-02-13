@@ -19,8 +19,6 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.Generated.Solution
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.Generated.SolutionPrompts.Builder", "LMStudio.Generated.SolutionPrompts.Builder\LMStudio.Generated.SolutionPrompts.Builder.csproj", "{6FF25AC3-FF93-4B12-AA7C-2590B84A94CD}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.OutputFiles", "LMStudio.OutputFiles\LMStudio.OutputFiles.shproj", "{65A3E944-EA4A-42CE-AD88-49531E7F23C6}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.OutputFolders", "LMStudio.OutputFolders\LMStudio.OutputFolders.shproj", "{C4A615D5-7AD7-4425-A461-7AD0BA28E176}"
@@ -66,7 +64,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AiPrompt.Library\AiPrompt.Library.projitems*{5f1e3573-d407-449f-acfc-a114d949b959}*SharedItemsImports = 13
-		LMStudio.OutputFiles\LMStudio.OutputFiles.projitems*{65a3e944-ea4a-42ce-ad88-49531e7f23c6}*SharedItemsImports = 13
 		AiPrompt.Library\AiPrompt.Library.projitems*{6ff25ac3-ff93-4b12-aa7c-2590b84a94cd}*SharedItemsImports = 5
 		AiPrompt.Library\AiPrompt.Library.projitems*{8f4867ac-ea04-402f-90ec-4d40b84c0d3f}*SharedItemsImports = 5
 		LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.projitems*{960bce4b-1536-4a67-8a98-7d4bc2b7d952}*SharedItemsImports = 13

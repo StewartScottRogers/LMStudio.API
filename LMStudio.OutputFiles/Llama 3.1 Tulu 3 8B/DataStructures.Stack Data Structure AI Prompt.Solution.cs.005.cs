@@ -1,1 +1,0 @@
-﻿public bool IsFull() => _topIndex == (_items.Length - 1);

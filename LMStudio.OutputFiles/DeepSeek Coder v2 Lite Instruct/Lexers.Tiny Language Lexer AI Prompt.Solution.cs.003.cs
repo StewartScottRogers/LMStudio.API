@@ -1,4 +1,0 @@
-﻿public enum TokenTypes
-{
-    NUMBER, ID, IF, THEN, WHILE, DO, END, PRINT, ASSIGN, PLUS, MINUS, MUL, DIV, LPAREN, RPAREN, EOF
-}

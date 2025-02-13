@@ -1,1 +1,0 @@
-﻿recordService.DeleteRecord("1");

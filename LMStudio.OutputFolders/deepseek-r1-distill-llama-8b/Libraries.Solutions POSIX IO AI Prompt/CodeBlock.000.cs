@@ -1,1 +1,0 @@
-﻿public static FileDescriptor OpenFile(string fileName, OpenMode mode)

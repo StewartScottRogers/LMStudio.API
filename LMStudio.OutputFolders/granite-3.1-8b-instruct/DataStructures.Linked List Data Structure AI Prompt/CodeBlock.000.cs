@@ -1,0 +1,1 @@
+﻿public readonly record struct Node(int data, Node? next);

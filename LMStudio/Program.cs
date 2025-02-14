@@ -66,7 +66,11 @@ internal class Program
             = {
                 // "Qwen2.5 Coder 32B Instruct"
                 // ,
-                 "Mistral Small 24B Instruct 2501"
+                // "mistral-7b-instruct-v0.3"
+                // ,
+                // "Mistral Small 24B Instruct 2501"
+                // ,
+                "granite-3.1-8b-instruct"
             };
 
         foreach (string aiModel in aiModels)

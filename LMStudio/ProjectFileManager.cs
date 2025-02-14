@@ -1,5 +1,4 @@
-﻿using AiPrompts;
-using Compiler.CSharp;
+﻿using Compiler.CSharp;
 using Compiler.CSharp.Extensions;
 using LMStudio.API;
 using LMStudio.API.Models;
@@ -9,6 +8,7 @@ using System;
 using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 
 namespace LMStudio
@@ -54,7 +54,7 @@ namespace LMStudio
 
             Console.WriteLine(new string('=', 80));
 
-            string projectPromptContent = EmbeddedPrompts.GetPrompt(projectPromptFilePath);
+            string projectPromptContent = GetPrompt(projectPromptFilePath);
             string inputPromptContent
                 = directivesPromptContent
                 + Environment.NewLine
@@ -149,6 +149,13 @@ namespace LMStudio
                 using StreamWriter streamWriter = new StreamWriter(path, false, Encoding.UTF8);
                 streamWriter.Write(contents);
             }
+        }
+
+        private static string GetPrompt(string path)
+        {
+            using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(path))
+            using (var reader = new System.IO.StreamReader(stream))
+                return reader.ReadToEnd();
         }
     }
 }

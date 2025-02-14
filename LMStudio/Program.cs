@@ -1,5 +1,4 @@
-﻿using AiPrompts;
-using LMStudio;
+﻿using LMStudio;
 using System;
 using System.IO;
 using System.Linq;
@@ -60,19 +59,20 @@ internal class Program
                 + projectPromptTuple.ProjectPromptContent
                 + Environment.NewLine;
 
-            GenerateSolutionPrompts.WriteAllText(contentOutputFilePath, contentOutput);
+            GenerateSolutionPrompts.WriteSolutionText(contentOutputFilePath, contentOutput);
         }
 
         string[] aiModels
             = {
-                 "Qwen2.5 Coder 32B Instruct"           //  0
-                //,"Mistral Small 24B Instruct 2501"      //  1
+                // "Qwen2.5 Coder 32B Instruct"
+                // ,
+                 "Mistral Small 24B Instruct 2501"
             };
 
         foreach (string aiModel in aiModels)
         {
             string[] projectFilePaths
-                = EmbeddedPrompts
+                = PromptCompositionBuilder
                     .GetAllPaths(".Project.md")
                         .ToArray();
 

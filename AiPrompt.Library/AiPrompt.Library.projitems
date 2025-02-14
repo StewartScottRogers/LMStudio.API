@@ -22,7 +22,4 @@
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Roslyn Ai Tokenizer AI Prompt.Project.md" />
     <EmbeddedResource Include="$(MSBuildThisFileDirectory)ProjectPrompts\Lexers\Tiny Language Lexer AI Prompt.Project.md" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)EmbeddedPrompts.cs" />
-  </ItemGroup>
 </Project>

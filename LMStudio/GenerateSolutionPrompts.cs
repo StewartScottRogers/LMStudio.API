@@ -26,9 +26,8 @@ namespace LMStudio
             return string.Empty;
         }
 
-        public static void WriteAllText(string path, string contents)
+        public static void WriteSolutionText(string path, string contents)
         {
-
             Contract.Requires(path != null);
             Contract.Requires(path.Length > 0);
 

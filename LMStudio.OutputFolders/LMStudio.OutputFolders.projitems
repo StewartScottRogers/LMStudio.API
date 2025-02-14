@@ -9,6 +9,7 @@
     <Import_RootNamespace>LMStudio.OutputFolders</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Mistral Small 24B Instruct 2501\" />
     <Folder Include="$(MSBuildThisFileDirectory)Qwen2.5 Coder 32B Instruct\" />
   </ItemGroup>
 </Project>

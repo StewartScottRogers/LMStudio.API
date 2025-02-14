@@ -1,1 +1,0 @@
-﻿public record Token(TokenKind Kind, string Lexeme, int LineNumber);

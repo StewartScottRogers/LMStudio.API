@@ -1,1 +1,0 @@
-﻿public record SearchResultRecord(int Position, Node NodeTuple);

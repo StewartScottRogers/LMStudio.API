@@ -64,9 +64,7 @@ internal class Program
 
         string[] aiModels
             = {
-                // "Qwen2.5 Coder 32B Instruct"
-                // ,
-                // "mistral-7b-instruct-v0.3"
+                // "Qwen2.5 Coder 32B Instruct"                
                 // ,
                 // "Mistral Small 24B Instruct 2501"
                 // ,

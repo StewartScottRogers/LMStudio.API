@@ -64,11 +64,13 @@ internal class Program
 
         string[] aiModels
             = {
-                // "Qwen2.5 Coder 32B Instruct"                
-                // ,
-                // "Mistral Small 24B Instruct 2501"
-                // ,
-                "granite-3.1-8b-instruct"
+                 //"Qwen2.5 Coder 32B Instruct"                
+                 //,
+                 //"Mistral Small 24B Instruct 2501"
+                 //,
+                 //"DeepSeek R1 Distill Llama 8B"
+                 //,
+                 "deepseek-coder-v2-lite-instruct"
             };
 
         foreach (string aiModel in aiModels)

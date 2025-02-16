@@ -3,36 +3,17 @@ using Compiler.CSharp.Extensions;
 using LMStudio.API;
 using LMStudio.API.Models;
 using LMStudio.Consoles;
+using LMStudio.Libraries;
 using Microsoft.CodeAnalysis;
 using System;
-using System.Diagnostics.Contracts;
 using System.IO;
 using System.Linq;
 using System.Reflection;
-using System.Text;
 
 namespace LMStudio
 {
     public static class ProjectFileManager
     {
-        public static string GetProjectOutputFolder(string directoryName, int levelsUp = 6)
-        {
-            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
-
-            for (int index = 0; index < levelsUp; index++)
-            {
-                string targetDirectory = Path.Combine(currentDirectory, directoryName);
-                if (Directory.Exists(targetDirectory))
-                    return targetDirectory;
-
-                currentDirectory = Directory.GetParent(currentDirectory)?.FullName;
-                if (currentDirectory == null)
-                    break;
-            }
-
-            return string.Empty;
-        }
-
         public static void BuildProjectFiles(string directivesPromptContent, string projectPromptFilePath, string outputFolder, string aiModelFolder)
         {
             Console.WriteLine(new string('=', 80));
@@ -64,7 +45,7 @@ namespace LMStudio
             string inputPromptContentFilePath
                 = Path.Combine(outputFolder, "input.md");
 
-            WriteAllText(inputPromptContentFilePath, inputPromptContent);
+            FileSystemManagement.WriteAllText(inputPromptContentFilePath, inputPromptContent);
 
             TokenShuttle tokenShuttle
                 = LMStudioConnection
@@ -89,7 +70,7 @@ namespace LMStudio
             string embeddedOutputFilePath
                 = Path.Combine(outputFolder, embeddedOutputFileName);
 
-            WriteAllText(embeddedOutputFilePath, promptOutputContent);
+            FileSystemManagement.WriteAllText(embeddedOutputFilePath, promptOutputContent);
 
             Console.WriteLine("");
             Console.WriteLine(new string('-', 80));
@@ -137,24 +118,14 @@ namespace LMStudio
             Console.WriteLine(codeBlockOutputFilePath);
             Console.WriteLine(codeBlock);
             Console.WriteLine(new string('*', 80));
-            WriteAllText(codeBlockOutputFilePath, codeBlock);
+            FileSystemManagement.WriteAllText(codeBlockOutputFilePath, codeBlock);
             Console.WriteLine(new string('-', 80));
-        }
-
-        private static void WriteAllText(string path, string contents)
-        {
-            {
-                Contract.Requires(path != null);
-                Contract.Requires(path.Length > 0);
-                using StreamWriter streamWriter = new StreamWriter(path, false, Encoding.UTF8);
-                streamWriter.Write(contents);
-            }
         }
 
         private static string GetPrompt(string path)
         {
             using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(path))
-            using (var reader = new System.IO.StreamReader(stream))
+            using (var reader = new StreamReader(stream))
                 return reader.ReadToEnd();
         }
     }

@@ -3,11 +3,11 @@ using System.Diagnostics.Contracts;
 using System.IO;
 using System.Text;
 
-namespace LMStudio
+namespace LMStudio.Libraries
 {
-    public static class GenerateSolutionPrompts
+    public static class FileSystemManagement
     {
-        public static string SearchForDirectoryRootPath(string directoryName, int levelsUp)
+        public static string GetSiblingFolder(string directoryName, int levelsUp = 6)
         {
             string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
 
@@ -17,7 +17,6 @@ namespace LMStudio
                 if (Directory.Exists(targetDirectory))
                     return targetDirectory;
 
-
                 currentDirectory = Directory.GetParent(currentDirectory)?.FullName;
                 if (currentDirectory == null)
                     break;
@@ -25,16 +24,12 @@ namespace LMStudio
 
             return string.Empty;
         }
-
-        public static void WriteSolutionText(string path, string contents)
+        public static void WriteAllText(string filePath, string text)
         {
-            Contract.Requires(path != null);
-            Contract.Requires(path.Length > 0);
-
-            Encoding encoding = Encoding.UTF8;
-
-            using (StreamWriter sw = new StreamWriter(path, false, encoding))
-                sw.Write(contents);
+            Contract.Requires(filePath != null);
+            Contract.Requires(filePath.Length > 0);
+            using StreamWriter streamWriter = new StreamWriter(filePath, false, Encoding.UTF8);
+            streamWriter.Write(text);
         }
 
     }

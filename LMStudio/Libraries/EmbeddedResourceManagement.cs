@@ -4,9 +4,9 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 
-namespace LMStudio
+namespace LMStudio.Libraries
 {
-    public static class PromptCompositionBuilder
+    public static class EmbeddedResourceManagement
     {
         public static string GetDirectivesPrompt(string endsWith)
         {

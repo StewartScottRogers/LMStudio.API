@@ -1,27 +1,27 @@
 ﻿using LMStudio;
+using LMStudio.Libraries;
 using System;
 using System.IO;
 using System.Linq;
-
 
 internal class Program
 {
     private static void Main(string[] args)
     {
         string directivesPrompt
-            = PromptCompositionBuilder
+            = EmbeddedResourceManagement
                 .GetDirectivesPrompt(".Directives.md");
 
         var projectPromptTuples
-            = PromptCompositionBuilder
+            = EmbeddedResourceManagement
                 .SelectProjectPromptTuples(".Project.md")
                     .ToArray();
 
         string promptsOutputDirectoryPath
             = Path
                 .Combine(
-                    GenerateSolutionPrompts
-                        .SearchForDirectoryRootPath("LMStudio.Generated.SolutionPrompts", 6),
+                    FileSystemManagement
+                        .GetSiblingFolder("LMStudio.Generated.SolutionPrompts", 6),
                     "Prompts"
                 );
 
@@ -59,7 +59,7 @@ internal class Program
                 + projectPromptTuple.ProjectPromptContent
                 + Environment.NewLine;
 
-            GenerateSolutionPrompts.WriteSolutionText(contentOutputFilePath, contentOutput);
+            FileSystemManagement.WriteAllText(contentOutputFilePath, contentOutput);
         }
 
         string[] aiModels
@@ -76,13 +76,13 @@ internal class Program
         foreach (string aiModel in aiModels)
         {
             string[] projectFilePaths
-                = PromptCompositionBuilder
+                = EmbeddedResourceManagement
                     .GetAllPaths(".Project.md")
                         .ToArray();
 
             string outputFolder
-                = ProjectFileManager
-                    .GetProjectOutputFolder("LMStudio.OutputFolders");
+                = FileSystemManagement
+                    .GetSiblingFolder("LMStudio.OutputFolders");
 
             foreach (string projectFilePath in projectFilePaths)
                 ProjectFileManager

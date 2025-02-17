@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>    
+    <RootNamespace>LMStudio</RootNamespace>
+  </PropertyGroup>
+
+
+  <ItemGroup>
+    <ProjectReference Include="..\Compiler.CSharp\Compiler.CSharp.csproj" />
+    <ProjectReference Include="..\Libraries\Compiler.CSharp\Compiler.CSharp.csproj" />
+    <ProjectReference Include="..\Libraries\LMStudio.API\LMStudio.API.csproj" />
+    <ProjectReference Include="..\LMStudio.API\LMStudio.API.csproj" />
+  </ItemGroup>
+
+  <Import Project="..\AiPrompt.Library\AiPrompt.Library.projitems" Label="Shared" />
+  
+</Project>

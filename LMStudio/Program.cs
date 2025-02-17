@@ -70,7 +70,9 @@ internal class Program
                  //,
                  //"DeepSeek R1 Distill Llama 8B"
                  //,
-                 "deepseek-coder-v2-lite-instruct"
+                 //"deepseek-coder-v2-lite-instruct"
+                 //,
+                 "deephermes-3-llama-3-8b-preview@f16"
             };
 
         foreach (string aiModel in aiModels)

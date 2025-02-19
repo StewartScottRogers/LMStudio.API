@@ -72,7 +72,9 @@ internal class Program
                  //,
                  //"deepseek-coder-v2-lite-instruct"
                  //,
-                 "deephermes-3-llama-3-8b-preview@f16"
+                 //"deephermes-3-llama-3-8b-preview@f16"
+                 //,
+                 "openthinker-32b"
             };
 
         foreach (string aiModel in aiModels)

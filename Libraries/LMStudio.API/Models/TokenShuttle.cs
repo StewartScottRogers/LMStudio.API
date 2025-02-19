@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace LMStudio.API.Models
+namespace LMStudio.Models
 {
     public class TokenShuttle : IEnumerable<string>
     {

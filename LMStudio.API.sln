@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.OutputFolders", "L
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.Library", "LMStudio.Library\LMStudio.Library.csproj", "{EC1F7A0C-58DC-4DCD-B93D-F98736EAB37E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAi.API", "Libraries\OpenAi.API\OpenAi.API.csproj", "{BD28141B-4E5E-4DDA-B17F-D4F51C954005}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{EC1F7A0C-58DC-4DCD-B93D-F98736EAB37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC1F7A0C-58DC-4DCD-B93D-F98736EAB37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EC1F7A0C-58DC-4DCD-B93D-F98736EAB37E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD28141B-4E5E-4DDA-B17F-D4F51C954005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD28141B-4E5E-4DDA-B17F-D4F51C954005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD28141B-4E5E-4DDA-B17F-D4F51C954005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD28141B-4E5E-4DDA-B17F-D4F51C954005}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -52,6 +58,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A21EC0CC-1091-9D2B-7AC2-422A3C797DAE} = {CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}
 		{82F02226-A70A-3FB0-860C-354DD2A3578B} = {CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}
+		{BD28141B-4E5E-4DDA-B17F-D4F51C954005} = {CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {5C79D6B3-4B27-4F11-A1E1-DE8E62F9B74F}

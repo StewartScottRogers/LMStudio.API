@@ -1,9 +1,8 @@
 ﻿using Compiler.CSharp;
 using Compiler.CSharp.Extensions;
-using LMStudio.API;
-using LMStudio.API.Models;
 using LMStudio.Consoles;
 using LMStudio.Libraries;
+using LMStudio.Models;
 using Microsoft.CodeAnalysis;
 using System;
 using System.IO;

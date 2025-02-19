@@ -4,8 +4,8 @@ using AutoGen.DotnetInteractive.Extension;
 using AutoGen.OpenAI;
 using AutoGen.OpenAI.Extension;
 using Google.Cloud.AIPlatform.V1;
-using LMStudio.API.Extensions;
-using LMStudio.API.Models;
+using LMStudio.Extensions;
+using LMStudio.Models;
 using Microsoft.DotNet.Interactive;
 using OpenAI;
 using System;
@@ -15,7 +15,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace LMStudio.API
+namespace LMStudio
 {
     public static class LMStudioConnection
     {

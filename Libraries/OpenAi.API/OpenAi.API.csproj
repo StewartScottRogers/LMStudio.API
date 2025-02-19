@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>LMStudio</RootNamespace>
+    <RootNamespace>OpenAi</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>

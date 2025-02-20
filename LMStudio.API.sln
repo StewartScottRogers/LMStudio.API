@@ -7,19 +7,19 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio", "LMStudio\LMStud
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "AiPrompt.Library", "AiPrompt.Library\AiPrompt.Library.shproj", "{5F1E3573-D407-449F-ACFC-A114D949B959}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LMStudio.Generated.SolutionPrompts", "LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.shproj", "{960BCE4B-1536-4A67-8A98-7D4BC2B7D952}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{CBC6E14B-0ABA-460D-8B08-BD2825B1E55E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Compiler.CSharp", "Libraries\Compiler.CSharp\Compiler.CSharp.csproj", "{A21EC0CC-1091-9D2B-7AC2-422A3C797DAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.API", "Libraries\LMStudio.API\LMStudio.API.csproj", "{82F02226-A70A-3FB0-860C-354DD2A3578B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.OutputFolders", "LMStudio.OutputFolders\LMStudio.OutputFolders.csproj", "{6092F300-B489-4462-904C-6ED17AF839D4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMStudio.Library", "LMStudio.Library\LMStudio.Library.csproj", "{EC1F7A0C-58DC-4DCD-B93D-F98736EAB37E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenAi.API", "Libraries\OpenAi.API\OpenAi.API.csproj", "{BD28141B-4E5E-4DDA-B17F-D4F51C954005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompt.Projects", "AiPrompt.Projects\AiPrompt.Projects.csproj", "{5E9283AB-E082-47C7-82E1-E1A5F545602C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AiPrompt.Solutions", "AiPrompt.Solutions\AiPrompt.Solutions.csproj", "{F1C4399A-A536-4BBF-8563-79349786CA87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +39,6 @@ Global
 		{82F02226-A70A-3FB0-860C-354DD2A3578B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{82F02226-A70A-3FB0-860C-354DD2A3578B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{82F02226-A70A-3FB0-860C-354DD2A3578B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6092F300-B489-4462-904C-6ED17AF839D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6092F300-B489-4462-904C-6ED17AF839D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6092F300-B489-4462-904C-6ED17AF839D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6092F300-B489-4462-904C-6ED17AF839D4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EC1F7A0C-58DC-4DCD-B93D-F98736EAB37E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EC1F7A0C-58DC-4DCD-B93D-F98736EAB37E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EC1F7A0C-58DC-4DCD-B93D-F98736EAB37E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +47,14 @@ Global
 		{BD28141B-4E5E-4DDA-B17F-D4F51C954005}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BD28141B-4E5E-4DDA-B17F-D4F51C954005}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BD28141B-4E5E-4DDA-B17F-D4F51C954005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E9283AB-E082-47C7-82E1-E1A5F545602C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E9283AB-E082-47C7-82E1-E1A5F545602C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E9283AB-E082-47C7-82E1-E1A5F545602C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E9283AB-E082-47C7-82E1-E1A5F545602C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1C4399A-A536-4BBF-8563-79349786CA87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1C4399A-A536-4BBF-8563-79349786CA87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1C4399A-A536-4BBF-8563-79349786CA87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1C4399A-A536-4BBF-8563-79349786CA87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,7 +69,6 @@ Global
 	EndGlobalSection
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		AiPrompt.Library\AiPrompt.Library.projitems*{5f1e3573-d407-449f-acfc-a114d949b959}*SharedItemsImports = 13
-		LMStudio.Generated.SolutionPrompts\LMStudio.Generated.SolutionPrompts.projitems*{960bce4b-1536-4a67-8a98-7d4bc2b7d952}*SharedItemsImports = 13
 		AiPrompt.Library\AiPrompt.Library.projitems*{ec1f7a0c-58dc-4dcd-b93d-f98736eab37e}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

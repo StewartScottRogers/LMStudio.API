@@ -21,7 +21,7 @@ internal class Program
             = Path
                 .Combine(
                     FileSystemManagement
-                        .GetSiblingFolder("LMStudio.Generated.SolutionPrompts", 6),
+                        .GetSiblingFolder("AiPrompt.Projects", 6),
                     "Prompts"
                 );
 
@@ -64,7 +64,7 @@ internal class Program
 
         string[] aiModels
             = {
-                 //"Qwen2.5 Coder 32B Instruct"                
+                 "Qwen2.5 Coder 32B Instruct"                
                  //,
                  //"Mistral Small 24B Instruct 2501"
                  //,
@@ -74,7 +74,7 @@ internal class Program
                  //,
                  //"deephermes-3-llama-3-8b-preview@f16"
                  //,
-                 "openthinker-32b"
+                 //"openthinker-32b"
             };
 
         foreach (string aiModel in aiModels)
@@ -86,7 +86,7 @@ internal class Program
 
             string outputFolder
                 = FileSystemManagement
-                    .GetSiblingFolder("LMStudio.OutputFolders");
+                    .GetSiblingFolder("AiPrompt.Solutions");
 
             foreach (string projectFilePath in projectFilePaths)
                 ProjectFileManager

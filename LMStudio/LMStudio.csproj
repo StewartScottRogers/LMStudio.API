@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Compiler.CSharp\Compiler.CSharp.csproj" />
-    <ProjectReference Include="..\LMStudio.API\LMStudio.API.csproj" />
+    <ProjectReference Include="..\Libraries\Compiler.CSharp\Compiler.CSharp.csproj" />
+    <ProjectReference Include="..\Libraries\LMStudio.API\LMStudio.API.csproj" />
     <ProjectReference Include="..\LMStudio.Library\LMStudio.Library.csproj" />
   </ItemGroup>
 

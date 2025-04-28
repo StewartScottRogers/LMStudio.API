@@ -80,7 +80,9 @@ internal class Program
                  //,
                  //"yi-coder-9b-chat"
                  //,
-                 "gemma-3-27b-it-qat"
+                 //"gemma-3-27b-it-qat"
+                 //,
+                 "gemma-3-27b-it"
             };
 
         foreach (string aiModel in aiModels)

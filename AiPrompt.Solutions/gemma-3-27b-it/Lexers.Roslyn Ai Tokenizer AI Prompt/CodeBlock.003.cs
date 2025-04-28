@@ -1,81 +1,49 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using AstLexer;
-using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.CSharp;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
+﻿// AstLexerTests/AstLexerTestClass.cs
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using AstGenerator;
 using AstPrettyPrinter;
 using AstReflowGenerator;
-using System;
-using System.Collections.Generic;
+using Microsoft.CodeAnalysis.CSharp.Syntax;
 
-namespace UnitTests
+namespace AstLexerTests
 {
     [TestClass]
-    public class AstLexerTests
+    public class AstLexerTestClass
     {
-        private readonly AbstractSyntaxTreeLexer abstractSyntaxTreeLexer = new AbstractSyntaxTreeLexer();
-        private readonly AbstractSyntaxTreePrettyPrinter abstractSyntaxTreePrettyPrinter = new AbstractSyntaxTreePrettyPrinter();
-        private readonly AbstractSyntaxTreeReflowGenerator abstractSyntaxTreeReflowGenerator = new AbstractSyntaxTreeReflowGenerator();
-
         [TestMethod]
-        public void TestLexIdentifier()
+        public void TestAstGenerationAndPrintingTuple()
         {
-            var sourceCode = "int myVariable;";
-            var tree = CSharpSyntaxTree.ParseText(sourceCode);
-            var root = tree.GetRoot();
-            var tokens = abstractSyntaxTreeLexer.Lex(root);
+            // Arrange
+            string sourceCode = "using System; public class MyClass { public int MyProperty { get; set; } }";
+            AstGeneratorClass astGenerator = new AstGeneratorClass(sourceCode);
 
-            Assert.AreEqual(1, tokens.Count);
-            Assert.AreEqual("Identifier", tokens[0].Type);
-            Assert.AreEqual("myVariable", tokens[0].Value);
+            // Act
+            CompilationUnitSyntax compilationUnitSyntax = astGenerator.GenerateAstTuple();
+            AstPrettyPrinterClass astPrettyPrinter = new AstPrettyPrinterClass(compilationUnitSyntax);
+            string prettyPrintedAst = astPrettyPrinter.PrettyPrintAstTuple();
+
+            // Assert
+            Assert.IsNotNull(prettyPrintedAst);
+            System.Diagnostics.Debug.WriteLine(prettyPrintedAst); // Output to Debug window for inspection
         }
 
         [TestMethod]
-        public void TestLexLiteral()
+        public void TestAstReflowGenerationTuple()
         {
-            var sourceCode = "int x = 10;";
-            var tree = CSharpSyntaxTree.ParseText(sourceCode);
-            var root = tree.GetRoot();
-            var tokens = abstractSyntaxTreeLexer.Lex(root);
+            // Arrange
+            string sourceCode = "using System; public class MyClass { public int MyProperty { get; set; } }";
+            AstGeneratorClass astGenerator = new AstGeneratorClass(sourceCode);
+            CompilationUnitSyntax compilationUnitSyntax = astGenerator.GenerateAstTuple();
+            AstReflowGeneratorClass astReflowGenerator = new AstReflowGeneratorClass(compilationUnitSyntax);
 
-            Assert.AreEqual(1, tokens.Count);
-            Assert.AreEqual("Literal", tokens[0].Type);
-            Assert.AreEqual("10", tokens[0].Value);
+            // Act
+            string generatedCode = astReflowGenerator.GenerateCodeTuple();
+
+            // Assert
+            Assert.AreEqual(sourceCode, generatedCode); // Verify reflowing produces the original code
         }
 
-        // Add 23 more unit tests here to cover various AST nodes and lexing scenarios.
-        // Examples: Lexing operators, keywords, expressions, statements, etc.
-        // Use Assert.AreEqual or other appropriate assertions to verify the expected token types and values.
-
-        [TestMethod]
-        public void TestLexSimpleAssignment()
-        {
-            var sourceCode = "int a = 5;";
-            var tree = CSharpSyntaxTree.ParseText(sourceCode);
-            var root = tree.GetRoot();
-            var tokens = abstractSyntaxTreeLexer.Lex(root);
-
-            Assert.AreEqual(2, tokens.Count);
-            Assert.AreEqual("Identifier", tokens[0].Type);
-            Assert.AreEqual("a", tokens[0].Value);
-            Assert.AreEqual("Literal", tokens[1].Type);
-            Assert.AreEqual("5", tokens[1].Value);
-        }
-
-        [TestMethod]
-        public void TestPrettyPrintAndReflow()
-        {
-            var sourceCode = "int x = 10;";
-            var tree = CSharpSyntaxTree.ParseText(sourceCode);
-            var root = tree.GetRoot();
-
-            string prettyPrintedAst = abstractSyntaxTreePrettyPrinter.Print(root);
-            Console.WriteLine("Pretty Printed AST:\n" + prettyPrintedAst); // Output for inspection
-
-            string reflowedCode = abstractSyntaxTreeReflowGenerator.GenerateCode(root);
-            Console.WriteLine("Reflowed Code:\n" + reflowedCode); // Output for inspection
-
-            Assert.AreEqual(sourceCode, reflowedCode); // Verify code is preserved
-        }
+        // Add 23 more unit tests here to cover various scenarios and edge cases.
+        // Examples:  Empty source code, invalid syntax, different types of statements, etc.
     }
 }

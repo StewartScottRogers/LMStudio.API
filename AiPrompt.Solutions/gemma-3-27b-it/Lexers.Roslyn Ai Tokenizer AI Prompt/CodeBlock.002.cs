@@ -1,42 +1,23 @@
-﻿using Microsoft.CodeAnalysis;
+﻿// AstReflowGenerator/AstReflowGeneratorClass.cs
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
-using System.Collections.Generic;
 
-namespace AstLexer
+namespace AstReflowGenerator
 {
-    public class AbstractSyntaxTreeLexer
+    public class AstReflowGeneratorClass
     {
-        public List<(string Type, string Value)> Lex(SyntaxNode node)
+        private readonly CompilationUnitSyntax compilationUnitSyntax;
+
+        public AstReflowGeneratorClass(CompilationUnitSyntax compilationUnitSyntax)
         {
-            var tokens = new List<(string Type, string Value)>();
-            LexSyntaxNode(node, tokens);
-            return tokens;
+            this.compilationUnitSyntax = compilationUnitSyntax;
         }
 
-        private void LexSyntaxNode(SyntaxNode node, List<(string Type, string Value)> tokens)
+        public string GenerateCodeTuple()
         {
-            if (node is IdentifierNameSyntax identifierName)
-            {
-                tokens.Add(("Identifier", identifierName.Identifier.Text));
-            }
-            else if (node is LiteralExpressionSyntax literalExpression)
-            {
-                tokens.Add(("Literal", literalExpression.ToString()));
-            }
-            // Add more token types as needed based on the AST structure you want to lex
-
-            if (node.HasChildNodes())
-            {
-                foreach (var child in node.GetChildNodesAndTokens())
-                {
-                    if (child is SyntaxNode syntaxNode)
-                    {
-                        LexSyntaxNode(syntaxNode, tokens);
-                    }
-                }
-            }
+            // Convert the AST back to C# code (basic reflowing).
+            return this.compilationUnitSyntax.ToText();
         }
     }
 }

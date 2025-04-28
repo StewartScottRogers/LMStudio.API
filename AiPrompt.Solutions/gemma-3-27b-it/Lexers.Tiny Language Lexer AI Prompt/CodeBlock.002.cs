@@ -1,68 +1,89 @@
-﻿// AstNode.cs
-public class AstNode
+﻿// Lexer.cs
+using System;
+using System.Collections.Generic;
+
+namespace LexerAstCore
 {
-    // Base class for all AST nodes.  Can add common properties here if needed.
-}
+	public class Lexer
+	{
+		private readonly string sourceCode;
+		private int currentPosition;
 
-// ProgramNode.cs
-public class ProgramNode : AstNode
-{
-    public StatementListNode StatementList { get; set; }
+		public Lexer(string code)
+		{
+			sourceCode = code;
+			currentPosition = 0;
+		}
 
-    public ProgramNode(StatementListNode statementList)
-    {
-        StatementList = statementList;
-    }
-}
+		public (TokenTuple, bool) GetNextToken()
+		{
+			// Skip whitespace
+			while (currentPosition < sourceCode.Length && char.IsWhiteSpace(sourceCode[currentPosition]))
+			{
+				currentPosition++;
+			}
 
-// StatementListNode.cs
-public class StatementListNode : AstNode
-{
-    public List<AstNode> Statements { get; set; } = new List<AstNode>();
+			if (currentPosition >= sourceCode.Length)
+			{
+				return (new TokenTuple(TokenType.EndOfFile, ""), false);
+			}
 
-    public StatementListNode(List<AstNode> statements)
-    {
-        Statements = statements;
-    }
-}
+			char currentChar = sourceCode[currentPosition];
 
-// AssignStatementNode.cs
-public class AssignStatementNode : AstNode
-{
-    public string Identifier { get; set; }
-    public ExpressionNode Expression { get; set; }
+			if (char.IsLetter(currentChar))
+			{
+				string identifier = ReadIdentifier();
+				return (new TokenTuple(TokenType.Identifier, identifier), true);
+			}
+			else if (char.IsDigit(currentChar))
+			{
+				string number = ReadNumber();
+				return (new TokenTuple(TokenType.Number, number), true);
+			}
 
-    public AssignStatementNode(string identifier, ExpressionNode expression)
-    {
-        Identifier = identifier;
-        Expression = expression;
-    }
-}
+			switch (currentChar)
+			{
+				case '+': return (new TokenTuple(TokenType.Plus, "+"), true);
+				case '-': return (new TokenTuple(TokenType.Minus, "-"), true);
+				case '*': return (new TokenTuple(TokenType.Multiply, "*"), true);
+				case '/': return (new TokenTuple(TokenType.Divide, "/"), true);
+				case ':':
+					if (currentPosition + 1 < sourceCode.Length && sourceCode[currentPosition + 1] == '=')
+					{
+						currentPosition += 2;
+						return (new TokenTuple(TokenType.Assign, ":="), true);
+					}
+					else
+					{
+						throw new Exception("Invalid character sequence."); // Or handle as an error token
+					}
+				case '(': return (new TokenTuple(TokenType.LeftParen, "("), true);
+				case ')': return (new TokenTuple(TokenType.RightParen, ")"), true);
+				case ';': return (new TokenTuple(TokenType.Semicolon, ";"), true);
+				default: throw new Exception("Invalid character."); // Or handle as an error token
+			}
+		}
 
-// ExpressionNode.cs (Base class for expressions)
-public class ExpressionNode : AstNode
-{
-    // Common properties or methods for all expressions can go here
-}
+		private string ReadIdentifier()
+		{
+			string identifier = "";
+			while (currentPosition < sourceCode.Length && (char.IsLetter(sourceCode[currentPosition]) || char.IsDigit(sourceCode[currentPosition])))
+			{
+				identifier += sourceCode[currentPosition];
+				currentPosition++;
+			}
+			return identifier;
+		}
 
-// IdentifierNode.cs
-public class IdentifierNode : ExpressionNode
-{
-    public string Name { get; set; }
-
-    public IdentifierNode(string name)
-    {
-        Name = name;
-    }
-}
-
-// NumberNode.cs
-public class NumberNode : ExpressionNode
-{
-    public int Value { get; set; }
-
-    public NumberNode(int value)
-    {
-        Value = value;
-    }
+		private string ReadNumber()
+		{
+			string number = "";
+			while (currentPosition < sourceCode.Length && char.IsDigit(sourceCode[currentPosition]))
+			{
+				number += sourceCode[currentPosition];
+				currentPosition++;
+			}
+			return number;
+		}
+	}
 }

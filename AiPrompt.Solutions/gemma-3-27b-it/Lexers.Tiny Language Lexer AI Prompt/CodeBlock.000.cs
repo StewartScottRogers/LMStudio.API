@@ -1,24 +1,24 @@
-﻿// Token.cs
-public readonly record struct TokenTuple(TokenType Type, string Value);
-
-// TokenType.cs
-public enum TokenType
+﻿// TokenTypes.cs
+namespace LexerAstCore
 {
-    Identifier,
-    Number,
-    Plus,
-    Minus,
-    Multiply,
-    Divide,
-    Assign,
-    If,
-    Then,
-    End,
-    While,
-    Do,
-    Print,
-    Semicolon,
-    LeftParen,
-    RightParen,
-    EndOfFile
+	public enum TokenType
+	{
+		Identifier,
+		Number,
+		Plus,
+		Minus,
+		Multiply,
+		Divide,
+		Assign,
+		IfKeyword,
+		ThenKeyword,
+		EndKeyword,
+		WhileKeyword,
+		DoKeyword,
+		PrintKeyword,
+		LeftParen,
+		RightParen,
+		Semicolon,
+		EndOfFile
+	}
 }

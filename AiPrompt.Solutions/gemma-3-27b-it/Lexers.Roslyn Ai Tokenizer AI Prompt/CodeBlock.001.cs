@@ -1,21 +1,23 @@
-﻿using Microsoft.CodeAnalysis;
+﻿// AstPrettyPrinter/AstPrettyPrinterClass.cs
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
-using System.Text;
 
-namespace AstReflowGenerator
+namespace AstPrettyPrinter
 {
-    public class AbstractSyntaxTreeReflowGenerator
+    public class AstPrettyPrinterClass
     {
-        public string GenerateCode(SyntaxNode node)
-        {
-            // This is a very basic example.  A full implementation would involve more complex AST traversal and code generation logic.
-            var compilationUnit = (CompilationUnitSyntax)node;
+        private readonly CompilationUnitSyntax compilationUnitSyntax;
 
-            using var writer = new StringWriter();
-            compilationUnit.WriteTo(writer, null); // Use Roslyn's built-in formatting
-            return writer.ToString();
+        public AstPrettyPrinterClass(CompilationUnitSyntax compilationUnitSyntax)
+        {
+            this.compilationUnitSyntax = compilationUnitSyntax;
+        }
+
+        public string PrettyPrintAstTuple()
+        {
+            // Format the AST for readability.
+            return this.compilationUnitSyntax.ToFullString();
         }
     }
 }

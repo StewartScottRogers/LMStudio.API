@@ -1,50 +1,28 @@
-﻿using Microsoft.CodeAnalysis;
+﻿// AstGenerator/AstGeneratorClass.cs
+using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
-using System;
-using System.Text;
 
-namespace AstPrettyPrinter
+namespace AstGenerator
 {
-    public class AbstractSyntaxTreePrettyPrinter
+    public class AstGeneratorClass
     {
-        private readonly StringBuilder stringBuilder = new StringBuilder();
-        private readonly int indentLevel;
+        private readonly string sourceCode;
 
-        public AbstractSyntaxTreePrettyPrinter(int indentLevel = 0)
+        public AstGeneratorClass(string sourceCode)
         {
-            this.indentLevel = indentLevel;
+            this.sourceCode = sourceCode;
         }
 
-        public string Print(SyntaxNode node)
+        public CompilationUnitSyntax GenerateAstTuple()
         {
-            stringBuilder.Clear();
-            PrintSyntaxNode(node);
-            return stringBuilder.ToString();
-        }
+            // Parse the C# code into a Syntax Tree.
+            var tree = CSharpSyntaxTree.ParseText(this.sourceCode);
 
-        private void PrintSyntaxNode(SyntaxNode node, int currentIndentLevel = 0)
-        {
-            string indent = new string(' ', currentIndentLevel * 4);
-            stringBuilder.AppendLine($"{indent}{node.GetType().Name}: {node}");
+            // Get the CompilationUnitSyntax (root of the AST).
+            CompilationUnitSyntax compilationUnitSyntax = tree.GetCompilationUnitRoot();
 
-            if (node is SyntaxList<SyntaxNode> syntaxList)
-            {
-                foreach (var child in syntaxList)
-                {
-                    PrintSyntaxNode(child, currentIndentLevel + 1);
-                }
-            }
-            else if (node.HasChildNodes())
-            {
-                foreach (var child in node.GetChildNodesAndTokens())
-                {
-                    if (child is SyntaxNode syntaxNode)
-                    {
-                        PrintSyntaxNode(syntaxNode, currentIndentLevel + 1);
-                    }
-                }
-            }
+            return compilationUnitSyntax;
         }
     }
 }

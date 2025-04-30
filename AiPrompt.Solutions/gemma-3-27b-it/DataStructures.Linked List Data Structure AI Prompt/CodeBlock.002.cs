@@ -5,13 +5,20 @@ namespace LinkedListDataStructure
 {
     public class LinkedListNode
     {
-        public int Data { get; set; }
-        public LinkedListNode Next { get; set; }
+        private readonly object data;
+        private LinkedListNode nextNode;
 
-        public LinkedListNode(int data)
+        public LinkedListNode(object data)
         {
-            Data = data;
-            Next = null;
+            this.data = data;
+            this.nextNode = null;
+        }
+
+        public object Data => this.data;
+        public LinkedListNode NextNode
+        {
+            get { return this.nextNode; }
+            set { this.nextNode = value; }
         }
     }
 }

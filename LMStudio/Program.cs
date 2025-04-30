@@ -64,24 +64,14 @@ internal class Program
 
         string[] aiModels
             = {
-                 //"Qwen2.5 Coder 32B Instruct"                
+                 //"qwen2.5-coder-32b-instruct@q6_k"                
                  //,
-                 //"Mistral Small 24B Instruct 2501"
-                 //,
-                 //"DeepSeek R1 Distill Llama 8B"
-                 //,
-                 //"deepseek-coder-v2-lite-instruct"
-                 //,
-                 //"deephermes-3-llama-3-8b-preview@f16"
-                 //,
-                 //"openthinker-32b"
-                 //,
-                 //"gemma-3-27b-it"
-                 //,
-                 //"yi-coder-9b-chat"
-                 //,
-                 //"gemma-3-27b-it-qat"
-                 //,
+                 "Mistral Small 24B Instruct 2501"
+                 ,
+                 "DeepSeek R1 Distill Llama 8B"
+                 ,
+                 "openthinker-32b"
+                 ,
                  "gemma-3-27b-it"
             };
 

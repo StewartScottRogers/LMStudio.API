@@ -5,65 +5,66 @@ namespace LinkedListDataStructure
 {
     public class LinkedList
     {
-        private LinkedListNode Head { get; set; }
+        private LinkedListNode headNode;
 
         public LinkedList()
         {
-            Head = null;
+            this.headNode = null;
         }
 
-        public void InsertAtBeginning(int data)
+        public void InsertAtBeginning(object data)
         {
             // Create a new node with the given data.
             LinkedListNode newNode = new LinkedListNode(data);
 
             // Make the new node point to the current head.
-            newNode.Next = Head;
+            newNode.NextNode = this.headNode;
 
             // Update the head to be the new node.
-            Head = newNode;
+            this.headNode = newNode;
         }
 
-        public void DeleteElement(int data)
+        public void DeleteElement(object data)
         {
             // If the list is empty, there's nothing to delete.
-            if (Head == null)
+            if (this.headNode == null)
             {
                 return;
             }
 
-            // If the element to be deleted is at the beginning of the list.
-            if (Head.Data == data)
+            // If the element to be deleted is at the head.
+            if (this.headNode.Data.Equals(data))
             {
-                Head = Head.Next;
+                this.headNode = this.headNode.NextNode;
                 return;
             }
 
             // Traverse the list to find the element to delete.
-            LinkedListNode current = Head;
-            while (current.Next != null && current.Next.Data != data)
+            LinkedListNode currentNode = this.headNode;
+            while (currentNode.NextNode != null && !currentNode.NextNode.Data.Equals(data))
             {
-                current = current.Next;
+                currentNode = currentNode.NextNode;
             }
 
             // If the element is found, remove it from the list.
-            if (current.Next != null)
+            if (currentNode.NextNode != null)
             {
-                current.Next = current.Next.Next;
+                currentNode.NextNode = currentNode.NextNode.NextNode;
             }
         }
 
-        public bool SearchElement(int data)
+        public bool SearchElement(object data)
         {
-            // Traverse the list to find the element.
-            LinkedListNode current = Head;
-            while (current != null)
+            LinkedListNode currentNode = this.headNode;
+
+            // Traverse the list and check if the element exists.
+            while (currentNode != null)
             {
-                if (current.Data == data)
+                if (currentNode.Data.Equals(data))
                 {
                     return true; // Element found.
                 }
-                current = current.Next;
+                currentNode = currentNode.NextNode;
             }
 
             return false; // Element not found.
@@ -71,11 +72,11 @@ namespace LinkedListDataStructure
 
         public void DisplayList()
         {
-            LinkedListNode current = Head;
-            while (current != null)
+            LinkedListNode currentNode = this.headNode;
+            while (currentNode != null)
             {
-                Console.Write(current.Data + " ");
-                current = current.Next;
+                Console.Write(currentNode.Data + " ");
+                currentNode = currentNode.NextNode;
             }
             Console.WriteLine();
         }

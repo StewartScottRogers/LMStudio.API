@@ -1,138 +1,45 @@
-﻿// LinkedListTests.cs
+﻿// LinkedListTest.cs
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using LinkedListDataStructure;
 
-namespace LinkedListDataStructureTests
+namespace LinkedListDataStructure
 {
     [TestClass]
-    public class LinkedListTests
+    public class LinkedListTest
     {
         [TestMethod]
-        public void InsertAtBeginning_EmptyList()
+        public void InsertAtBeginning_ValidData_InsertsNode()
         {
-            // Arrange
             LinkedList linkedList = new LinkedList();
-
-            // Act
             linkedList.InsertAtBeginning(10);
-
-            // Assert
-            Assert.AreEqual(10, linkedList.Head?.Data);
+            Assert.AreEqual(10, linkedList.headNode.Data);
         }
 
         [TestMethod]
-        public void InsertAtBeginning_NonEmptyList()
+        public void DeleteElement_FirstElement_DeletesCorrectly()
         {
-            // Arrange
             LinkedList linkedList = new LinkedList();
-            linkedList.InsertAtBeginning(20);
-
-            // Act
             linkedList.InsertAtBeginning(10);
-
-            // Assert
-            Assert.AreEqual(10, linkedList.Head?.Data);
-            Assert.AreEqual(20, linkedList.Head?.Next?.Data);
-        }
-
-        [TestMethod]
-        public void DeleteElement_EmptyList()
-        {
-            // Arrange
-            LinkedList linkedList = new LinkedList();
-
-            // Act
             linkedList.DeleteElement(10);
-
-            // Assert
-            Assert.IsNull(linkedList.Head);
+            Assert.IsNull(linkedList.headNode);
         }
 
         [TestMethod]
-        public void DeleteElement_FirstElement()
+        public void SearchElement_ExistingElement_ReturnsTrue()
         {
-            // Arrange
             LinkedList linkedList = new LinkedList();
             linkedList.InsertAtBeginning(10);
-
-            // Act
-            linkedList.DeleteElement(10);
-
-            // Assert
-            Assert.IsNull(linkedList.Head);
+            bool result = linkedList.SearchElement(10);
+            Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void DeleteElement_MiddleElement()
+        public void SearchElement_NonExistingElement_ReturnsFalse()
         {
-            // Arrange
-            LinkedList linkedList = new LinkedList();
-            linkedList.InsertAtBeginning(30);
-            linkedList.InsertAtBeginning(20);
-            linkedList.InsertAtBeginning(10);
-
-            // Act
-            linkedList.DeleteElement(20);
-
-            // Assert
-            Assert.AreEqual(10, linkedList.Head?.Data);
-            Assert.AreEqual(30, linkedList.Head?.Next?.Data);
-        }
-
-        [TestMethod]
-        public void DeleteElement_LastElement()
-        {
-            // Arrange
             LinkedList linkedList = new LinkedList();
             linkedList.InsertAtBeginning(10);
-
-            // Act
-            linkedList.DeleteElement(10);
-
-            // Assert
-            Assert.IsNull(linkedList.Head);
-        }
-
-        [TestMethod]
-        public void SearchElement_EmptyList()
-        {
-            // Arrange
-            LinkedList linkedList = new LinkedList();
-
-            // Act & Assert
-            Assert.IsFalse(linkedList.SearchElement(10));
-        }
-
-        [TestMethod]
-        public void SearchElement_Present()
-        {
-            // Arrange
-            LinkedList linkedList = new LinkedList();
-            linkedList.InsertAtBeginning(30);
-            linkedList.InsertAtBeginning(20);
-            linkedList.InsertAtBeginning(10);
-
-            // Act
-            bool found = linkedList.SearchElement(20);
-
-            // Assert
-            Assert.IsTrue(found);
-        }
-
-        [TestMethod]
-        public void SearchElement_Absent()
-        {
-            // Arrange
-            LinkedList linkedList = new LinkedList();
-            linkedList.InsertAtBeginning(30);
-            linkedList.InsertAtBeginning(20);
-            linkedList.InsertAtBeginning(10);
-
-            // Act
-            bool found = linkedList.SearchElement(40);
-
-            // Assert
-            Assert.IsFalse(found);
+            bool result = linkedList.SearchElement(20);
+            Assert.IsFalse(result);
         }
     }
 }

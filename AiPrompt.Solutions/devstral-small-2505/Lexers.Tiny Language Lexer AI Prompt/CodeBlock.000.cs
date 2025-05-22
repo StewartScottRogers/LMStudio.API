@@ -1,0 +1,20 @@
+﻿public enum TokenType
+{
+    Identifier,
+    Number,
+    Assign,
+    Plus,
+    Minus,
+    Multiply,
+    Divide,
+    LParen,
+    RParen,
+    If,
+    Then,
+    End,
+    While,
+    Do,
+    Print,
+    Semicolon,
+    Eof
+}

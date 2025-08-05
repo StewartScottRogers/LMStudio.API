@@ -1,0 +1,1 @@
+﻿// This code manages parts in an inventory system. It uses only Microsoft Basic Component Library and explicit types.

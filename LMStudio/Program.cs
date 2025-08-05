@@ -64,7 +64,11 @@ internal class Program
 
         string[] aiModels
             = {
-                 "devstral-small-2505"                
+                 "qwen/qwen3-coder-30b"
+                 //,
+                 //"deepseek/deepseek-r1-0528-qwen3-8b"
+                 //,
+                 //"devstral-small-2505"                
                  //,
                  //"Mistral Small 24B Instruct 2501"
                  //,

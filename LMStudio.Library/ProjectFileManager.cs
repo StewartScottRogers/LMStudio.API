@@ -49,7 +49,7 @@ namespace LMStudio
             TokenShuttle tokenShuttle
                 = LMStudioConnection
                     .FetchAiReplies(
-                        endpoint: "http://192.168.1.3:1232",
+                        endpoint: "http://192.168.1.6:1232",
                         aiModel: aiModelFolder,
                         prompt: inputPromptContent
                     );
